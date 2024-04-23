@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro de tarjeta de crédito</title>
+    <link rel="stylesheet" href="../Public/css/reset.css">
+    <link rel="stylesheet" href="../Public/css/registrarTarjetaCredito.css">
+</head>
+
+<body>
+    <main>
+        <header class="fondo1">
+            <nav class="navegacion">
+                <div class="logo">
+                    <a href="listarSiniestros.html"><b>VIAJE SEGURO™</b></a>
+                </div>
+                <ul class="menu">
+                    <li><a href="RegistrarSiniestro.html">Registrar siniestro</a></li>
+                    <li><a href="registrarSolicitud Asistencia.html">Solicitar asistencia</a></li>
+                    <li><a href="listarVehiculos.html">Registrar vehiculo</a></li>
+                    <li><a href="#">Opciones</a>
+                        <ul class="submenu">
+                            <li><a href="verPerfilUsuarioRegular.html">Ver Perfil</a></li>
+                            <li><a href="listarTarjetasCredito.html">Registrar método de pago</a></li>
+                            <li><a href="#" onclick="redirectLogout();">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="registroMetodoPago">
+            <hr class="sinBorderIzquierdo">
+            <h1 class="titulo">Registrar Tarjeta de crédito</h1>
+            <hr class="sinBorderDerecho">
+        </section>
+        <form class="gridTarjetaCredito" id="formularioTarjeta">
+            <div class="formularioTarjetaCredito">
+                <fieldset class=formaDePago>
+                    <legend>Seleccione su método de pago</legend>
+                    <select class="tipoTarjeta" id="metodoPago" tabIndex="1" required>
+                    <option value="">--Seleccione un método de pago--</option>
+                    <option value="Tarjeta Bancaria" selected>Tarjeta de crédito o débito</option>
+                </select>
+                </fieldset>
+                <fieldset class="cardNumber">
+                    <legend>Número de tarjeta</legend>
+                    <div>
+                        <input type="text" id="numeroTarjeta" tabIndex="2" placeholder="0000 0000 0000 0000" maxlength="16" required>
+                        <span id="entidadFinanciera"></span>
+                        <span id="entidadFinanciera2"></span>
+                        <span id="entidadFinanciera3"></span>
+                        <span id="formatoCorrecto"></span>
+                        <span id="tarjetaValida"></span>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="vencimiento">Fecha de vencimiento</legend>
+                    <div class="fechaVencimiento" id="containerFechaVencimiento">
+                        <div class="mes">
+                            <input type="tel" id="mesExpiracion" tabindex="3" placeholder="MM" maxlength="2" required>
+                            <span id="estadoExpiracion"></span>
+                        </div>
+                        <span class="divisor">/</span>
+                        <div>
+                            <input type="tel" id="annoExpiracion" tabIndex="4" placeholder="YY" maxlength="2" required>
+                            <span id="estadoExpiracion2"></span>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="codSeguridad">
+                    <legend class="leyendaSeguridad">Código de seguridad</legend>
+                    <div class="inputCodigo">
+                        <input type="tel" id="securityCode" tabIndex="5" maxlength="4" required>
+                        <span id="estadoCodigoSeguridad"></span>
+                    </div>
+                </fieldset>
+                <fieldset class="nameOnCard">
+                    <legend>Nombre en tarjeta</legend>
+                    <div>
+                        <input type="text" tabIndex="6" id="cardHolder" style="text-transform: uppercase;" placeholder="Tarjetahabiente" required>
+                    </div>
+                </fieldset>
+            </div>
+        </form>
+        </div>
+        <div class="botonRegistrar">
+            <button type="button" id="registrarTarjeta" class="botonAgregar" tabIndex="7">Agregar</button>
+        </div>
+        <footer>
+            <div id="footer">
+                <div class="espacio1">
+                    <a id="face" href="http://www.facebook.com" target="blank">
+                        <i class="fab fa-facebook fa-3x"></i>
+                    </a>
+                    <a id="twit" href="https://twitter.com/?lang=es" target="blank">
+                        <i class="fab fa-twitter fa-3x"></i>
+                    </a>
+                    <a id="instagram" href="https://www.instagram.com/?hl=es-la" target="blank">
+                        <i class="fab fa-instagram fa-3x"></i>
+                    </a>
+                </div>
+                <div id="piePagina">
+                    <p>Derechos Reservados © 2020</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="../Public/js/registroTarjetaCreditoServicio.js"></script>
+    <script src="../Public/js/registroTarjetaCreditoControlador.js"></script>
+</body>
+
+</html>

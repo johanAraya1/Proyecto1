@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="stylesheet" href="../Public/css/reset.css">
+    <link rel="stylesheet" href="../Public/css/listarTarjetasUsuario.css">
+    <title>Listado de tarjetas de crédito</title>
+</head>
+
+<body>
+    <header class="fondo1">
+        <nav class="navegacion">
+            <div class="logo">
+                <a href="listarSiniestrosADM.html"><b>VIAJE SEGURO™</b></a>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Registrar usuarios</a>
+                    <ul class="submenu">
+                        <li><a href="registro_usuario_especializado.html">Registrar usuarios especializados</a></li>
+                        <li><a href="RegistrarUER.html">Registrar usuarios encargados de ruta</a></li>
+                        <li><a href="registrarUsuarioNormalADM.html">Registrar usuarios normales</a></li>
+                        <li><a href="listar_usuarios.html">Lista de usuarios</a></li>
+                    </ul>
+                </li>
+                <li><a href="listarCategoria.html">Categorías</a></li>
+                <li><a href="registrarRutasADM.html">Registrar ruta</a></li>
+                <li><a href="RegistrarSiniestroADM.html">Registrar siniestro</a></li>
+                <li><a href="registrarSolicitud AsistenciaADM.html">Solicitar asistencia</a></li>
+
+                <li><a href="listarVehiculosADM.html">Registrar vehiculo</a>
+                    <ul class="submenu">
+                        <li><a href="listarTipoVehiculos.html">Tipos de vehículos</a></li>
+                        <li><a href="caracteristicas.html">Caracteristicas</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Opciones</a>
+                    <ul class="submenu">
+                        <li><a href="listarTarjetasCreditoADM.html">Registrar método de pago</a></li>
+                        <li><a href="#" onclick="redirectLogout();">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="tituloListarTarjetas">
+        <hr class="sinBorderIzquierdo">
+        <h4>Mis Tarjetas</h4>
+        <hr class="sinBorderDerecho">
+    </div>
+    <div class="contenidoTarjetas">
+        <div class="filtrarTarjetas">
+            <label for="filtroTarjetas">Buscar:</label>
+            <input type="text" id="filtroTarjetas" class="inputFiltrar">
+        </div>
+        <table id="tablaTarjetasCredito">
+            <thead id="tableHead">
+                <tr>
+                    <!--  <th id="thFormaPago">FORMA DE PAGO</th> -->
+                    <th id="thEntidadfinanciera">ENTIDAD FINANCIERA</th>
+                    <th id="thNumeroTarjeta">NUMERO DE TARJETA</th>
+                    <th id="thFechaExpiracion">FECHA DE EXPIRACIÓN</th>
+                    <!--   <th id="thCodigoSeguridad">CODIGO DE SEGURIDAD</th> -->
+                    <th id="thNombreTarjeta">NOMBRE EN TARJETA</th>
+                    <!--   <th id="thPropietario">PROPIETARIO REGISTRADO</th> -->
+                    <th id="thEstado">ESTADO</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button type="button" id="botonRegistrarTarjeta">Añadir Tarjeta de crédito</button>
+    </div>
+
+    <footer>
+        <div id="footer">
+            <div class="espacio1">
+                <a id="face" href="http://www.facebook.com" target="blank">
+                    <i class="fab fa-facebook fa-3x"></i>
+                </a>
+                <a id="twit" href="https://twitter.com/?lang=es" target="blank">
+                    <i class="fab fa-twitter fa-3x"></i>
+                </a>
+                <a id="instagram" href="https://www.instagram.com/?hl=es-la" target="blank">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </a>
+            </div>
+            <div id="piePagina">
+                <p>Derechos Reservados © 2020</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+    <script src="../Public/js/registroTarjetaCreditoServicio.js"></script>
+    <script src="../Public/js/listarTarjetaCreditoControladorADM.js"></script>
+</body>
+
+</html>

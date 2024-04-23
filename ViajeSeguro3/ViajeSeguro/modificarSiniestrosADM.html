@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro de Siniestros</title>
+    <link rel="stylesheet" href="../Public/css/reset.css">
+    <link rel="stylesheet" href="../Public/css/generalSiniestro.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" type="text/css" />
+
+    <header class="fondo1">
+        <nav class="navegacion">
+            <div class="logo">
+                <a href="listarSiniestros.html"><b>VIAJE SEGURO™</b></a>
+            </div>
+            <ul class="menu">
+                <li><a href="RegistrarSiniestro.html">Registrar siniestro</a></li>
+                <li><a href="registrarSolicitud Asistencia.html">Solicitar asistencia</a></li>
+                <li><a href="listarVehiculos.html">Registrar vehiculo</a></li>
+                <li><a href="#">Opciones</a>
+                    <ul class="submenu">
+                        <li><a href="verPerfilUsuarioRegular.html">Ver Perfil</a></li>
+                        <li><a href="listarTarjetasCredito.html">Registrar método de pago</a></li>
+                        <li><a href="#" onclick="redirectLogout();">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="grid">
+            <div id="lineaIzquierda">
+                <hr>
+            </div>
+
+            <div id="titulo">
+                <h1>Modificar de Siniestros</h1>
+            </div>
+
+            <div id="lineaDerecha">
+                <hr>
+            </div>
+
+            <div id="fotoSiniestro">
+                <img id="foto">
+
+                <div id="btnSubirFoto">
+                    <button type="button" id="btnFoto">Subir foto</button>
+                </div>
+            </div>
+
+            <div id="inputTipoDeSiniestro">
+                <label for="sltTipoDeSiniestro"> <span>*</span>Categoría:</label>
+            </div>
+
+            <div id="scrollTipoDeSiniestro">
+                <select id="sltTipoDeSiniestro" required>
+                 <!-- <option value="">Seleccione el tipo de siniestro</option> -->
+                 <option value=""></option>
+                </select>
+            </div>
+
+            <div id=descripcion>
+                <label for="txtDescripcion"><span>*</span>Descripción:</label>
+            </div>
+
+            <div id="txtxDescripcion">
+                <textarea id="txtDescripcion" cols="30" rows="10" required></textarea>
+            </div>
+
+            <!-- <div id="gridUb"> -->
+            <div id="lineaIzquierdaUb">
+                <hr>
+            </div>
+
+            <div id="tituloUb">
+                <h1>Modifique la ubicación:</h1>
+            </div>
+
+            <div id="lineaDerechaUb">
+                <hr>
+            </div>
+            <!-- </div> -->
+            <!-- <div><span>*</span></div> -->
+
+            <div id="map">
+
+            </div>
+
+            <div id="coordinates" class="coordinates">
+
+            </div>
+
+
+            <!-- <div id="solAsis">
+                <label for="chxSolAsist">Solicitar Asistencia</label>
+                <input type="checkbox" id="chxSolAsist">
+            </div> -->
+
+            <div id="ProvinciaGrid">
+                <label for="sltProvincia"><span>*</span>Provincia</label>
+            </div>
+            <div id="ProvinciaTxtGrid">
+                <select id="sltProvincia" name="sltProvincia    " class="inputStyle" required>
+                    <option value="">Seleccione</option>
+                    </select>
+            </div>
+
+            <div id="CantonGrid">
+                <label for="sltCanton"><span>*</span>Canton</label>
+            </div>
+            <div id="CantonTxtGrid">
+                <select id="sltCanton" name="sltCanton" class="inputStyle" required>
+                    <option value="">Seleccione</option>
+                </select>
+            </div>
+
+            <div id="DistritoGrid">
+                <label for="sltDistrito"><span>*</span>Distrito</label>
+            </div>
+            <div id="DistritoTxtGrid">
+                <select id="sltDistrito" name="sltDistrito" class="inputStyle" required>
+                    <option value="">Seleccione</option>
+                </select>
+            </div>
+
+            <div id="SenasGrid">
+                <label for="txtSenas">Otras Señas:</label>
+            </div>
+            <div id="SenasTxtGrid">
+                <input type="text" id=txtSenas>
+            </div>
+
+            <div id="boton">
+                <button type="button" id="btnGuardar">GUARDAR CAMBIOS</button>
+            </div>
+        </div>
+
+
+        <footer>
+            <div id="footer">
+                <div class="espacio1">
+                    <a id="face" href="http://www.facebook.com" target="blank">
+                        <i class="fab fa-facebook fa-3x"></i>
+                    </a>
+                    <a id="twit" href="https://twitter.com/?lang=es" target="blank">
+                        <i class="fab fa-twitter fa-3x"></i>
+                    </a>
+                    <a id="instagram" href="https://www.instagram.com/?hl=es-la" target="blank">
+                        <i class="fab fa-instagram fa-3x"></i>
+                    </a>
+                </div>
+                <div id="piePagina">
+                    <p>Derechos Reservados © 2020</p>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script src="./Public/js/registroServicio.js"></script>
+        <script src="./Public/js/listarCategoriasControlador.js"></script>
+        <script src="./Public/js/mapaControlador.js"></script>
+        <script src="./Public/js/servicioFoto.js"></script>
+
+        <!-- <script src="./Public/js/registroControlador.js"></script> -->
+
+        <script src="./Public/js/servicioUbicacionSenas.js"></script>
+        <script src="./Public/js/listarUbicacionSenas.js"></script>
+        <script src="./Public/js/modificarSiniestrosControlador.js"></script>
+
+    </main>
+
+</body>
+
+</html>

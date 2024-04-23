@@ -1,0 +1,229 @@
+body {
+    /* margin: 0 auto;
+    padding: 0; */
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navegacion {
+    height: 45px;
+    width: 100%;
+    background: #000;
+    display: flow-root;
+    position: fixed;
+    z-index: 1000;
+    /* margin-top: -75px; */
+    font-family: 'Roboto', sans-serif;
+}
+
+.navegacion ul {
+    /* margin-top: -1px; */
+    float: right;
+    margin-right: 50px;
+    padding-top: 13px;
+    padding-left: 10px;
+    list-style: none;
+}
+
+.logo {
+    float: left;
+    margin-top: 13px;
+    margin-left: 50px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu>li {
+    display: inline-block;
+}
+
+.menu>li>a {
+    margin-top: -15px;
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: rgb(221, 176, 176);
+    transition: all .3s;
+}
+
+.submenu {
+    position: absolute;
+    background: #333333;
+    width: 10%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.titulo h1 {
+    font-size: 20px;
+    color: #000;
+}
+
+#map {
+    margin-top: 50px;
+    width: 100%;
+    height: 300px !important;
+}
+
+.coordinates {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 18px;
+    border-radius: 3px;
+    display: none;
+}
+
+form label,
+form select,
+form textarea,
+form input {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+form input,
+form select {
+    padding: 15px 10px;
+}
+
+.col1 {
+    display: inline-block;
+    width: 46%;
+    padding: 0 15px;
+    position: relative;
+    bottom: 200px;
+}
+
+.col1 .subCol {
+    width: 300px;
+    margin: -10px;
+    padding-left: 60px;
+}
+
+.contenido .titulo {
+    padding-top: 120px;
+    color: #707070;
+    text-align: center;
+}
+
+.col2 {
+    display: inline-block;
+    width: 46%;
+    padding: 0 15px;
+    margin-top: 20px;
+}
+
+.col2 #map {
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.col3 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    bottom: 100px;
+}
+
+.col3 input {
+    width: 200px !important;
+    padding: 15px;
+    background-color: #707070;
+    color: #fff;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid #707070;
+}
+
+footer {
+    font-weight: bold;
+    height: 140px;
+    background-color: #000;
+}
+
+footer a {
+    margin-right: 20px;
+}
+
+#piePagina {
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+#face,
+#instagram,
+#twit {
+    font-size: 5px;
+    border: 2px solid #fff;
+    padding: 3px;
+    margin-top: 30px;
+    display: inline-block;
+    background-color: #fff;
+    color: black;
+    border-radius: 3px;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 60px 1fr;
+}
+
+.espacio1 {
+    grid-column: 3/5;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#piePagina {
+    display: flex;
+    grid-column: 3/5;
+    grid-row: 2;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.inputError {
+    border: 2px solid #ee5253;
+}

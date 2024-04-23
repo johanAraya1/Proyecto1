@@ -1,0 +1,279 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navegacion {
+    width: 100%;
+    margin: 0 auto;
+    background: #000;
+    display: flow-root;
+    position: fixed;
+    z-index: 1000;
+}
+
+.navegacion ul {
+    float: right;
+    margin-right: 50px;
+    padding-left: 10px;
+    list-style: none;
+}
+
+.logo {
+    float: left;
+    margin-top: 16px;
+    margin-left: 50px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu>li {
+    display: inline-block;
+}
+
+.menu>li>a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: rgb(221, 176, 176);
+    transition: all .3s;
+}
+
+.submenu {
+    position: absolute;
+    background: #333333;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Aqui terminan los estilos del header y comienzan los del body */
+
+.sinBorderDerecho {
+    border: solid 2px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #35682d;
+    width: 20%;
+    align-items: center;
+}
+
+.sinBorderIzquierdo {
+    border: solid 2px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #35682d;
+    width: 20%;
+    align-items: center;
+}
+
+.tituloListarTarjetas {
+    display: flex;
+    text-align: center;
+    padding-top: 80px;
+    font-size: 24px;
+}
+
+
+/* .contenidoTarjetas {} */
+
+#tablaTarjetasCredito {
+    /* width: 90%;
+    height: 500px;
+    margin-top: 40px; */
+    margin: 20px auto;
+    width: 90%;
+}
+
+#botonRegistrarTarjeta {
+    padding: 10px 30px 10px 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #707070;
+    color: #fff;
+    position: relative;
+    text-decoration-color: #fff;
+    align-self: center;
+    justify-self: center;
+    margin-left: 100px;
+}
+
+#btnEditar {
+    padding: 10px 30px 10px 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #707070;
+    color: #fff;
+    position: relative;
+    text-decoration-color: #fff;
+    align-self: center;
+    justify-self: center;
+}
+
+#btnEliminar {
+    padding: 10px 30px 10px 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: red;
+    color: #fff;
+    position: relative;
+    text-decoration-color: #fff;
+    align-self: center;
+    justify-self: center;
+}
+
+#btnActivar {
+    padding: 10px 20px 10px 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #707070;
+    color: #fff;
+    position: relative;
+    text-decoration-color: #fff;
+    align-self: center;
+    justify-self: center;
+}
+
+#filtroTarjetas {
+    padding: 5px;
+    margin: 10px;
+    width: 300px;
+    border-color: #009879;
+}
+
+.filtrarTarjetas {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+table {
+    background-color: #fff;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100px;
+    color: #000;
+}
+
+th,
+td {
+    padding: 20px;
+    border-bottom: solid #35682d;
+}
+
+td {
+    border-top: solid #35682d;
+}
+
+tr:nth-child(even) {
+    background-color: #ddd
+}
+
+tr:hover td {
+    background-color: rgba(145, 143, 143, 0.568);
+}
+
+#tableHead {
+    position: relative;
+    bottom: 25px;
+}
+
+
+/* #thFormaPago {}
+#thEntidadfinanciera {}
+#thNumeroTarjeta {}
+#thFechaExpiracion {}
+#thCodigoSeguridad {}
+#thNombreTarjeta {}
+#thPropietario {}
+#thEstado {} */
+
+
+/*Aqui terminan los estilos del body y comienzan los del footer */
+
+footer {
+    font-weight: bold;
+    height: 140px;
+    background-color: #000;
+    margin-top: 326px;
+}
+
+footer a {
+    margin-right: 20px;
+}
+
+#piePagina {
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+#face,
+#instagram,
+#twit {
+    font-size: 5px;
+    border: 2px solid #fff;
+    padding: 3px;
+    margin-top: 30px;
+    display: inline-block;
+    background-color: #fff;
+    color: black;
+    border-radius: 3px;
+}
+
+#footer {
+    margin-top: 300px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 60px 1fr;
+}
+
+.espacio1 {
+    grid-column: 3/5;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#piePagina {
+    display: flex;
+    grid-column: 3/5;
+    grid-row: 2;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}

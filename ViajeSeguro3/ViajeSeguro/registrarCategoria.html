@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro de Tipo de Siniestros</title>
+    <link rel="stylesheet" href="Public/css/reset.css">
+    <link rel="stylesheet" href="Public/css/generalCategoria.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <header class="fondo1">
+        <nav class="navegacion">
+            <div class="logo">
+                <a href="listarSiniestrosADM.html"><b>VIAJE SEGURO™</b></a>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Registrar usuarios</a>
+                    <ul class="submenu">
+                        <li><a href="registro_usuario_especializado.html">Registrar usuarios especializados</a></li>
+                        <li><a href="RegistrarUER.html">Registrar usuarios encargados de ruta</a></li>
+                        <li><a href="registrarUsuarioNormalADM.html">Registrar usuarios normales</a></li>
+                        <li><a href="listar_usuarios.html">Lista de usuarios</a></li>
+                    </ul>
+                </li>
+                <li><a href="listarCategoria.html">Categorías</a></li>
+                <li><a href="registrarRutasADM.html">Registrar ruta</a></li>
+                <li><a href="RegistrarSiniestroADM.html">Registrar siniestro</a></li>
+                <li><a href="registrarSolicitud AsistenciaADM.html">Solicitar asistencia</a></li>
+
+                <li><a href="listarVehiculosADM.html">Registrar vehiculo</a>
+                    <ul class="submenu">
+                        <li><a href="listarTipoVehiculos.html">Tipos de vehículos</a></li>
+                        <li><a href="caracteristicas.html">Caracteristicas</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Opciones</a>
+                    <ul class="submenu">
+                        <li><a href="listarTarjetasCreditoADM.html">Registrar método de pago</a></li>
+                        <li><a href="#" onclick="redirectLogout();">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <form>
+
+            <div class="grid">
+
+                <div>
+                    <h1 class="innerGrid">
+                        <p id="line1">____________________________</p>
+                        <p>Registro de Categorías</p>
+                        <p id="line2">____________________________</p>
+                    </h1>
+                </div>
+
+                <div id="lblTipoDeSiniestro">
+                    <label for="txtTipoDeSiniestro"><span>*</span> Categoría</label>
+                </div>
+
+                <div id="txtTipoDeSiniestro">
+                    <input type="text" id="txtTipoSiniestro" required>
+                </div>
+
+                <div Descripción>
+                    <input type="text" placeholder="Descripción" id="txtDescripcion" class="graybox" required>
+                </div>
+
+
+                <div id="adjuntarIcono">
+                    <img id="imagenPrevia" src="https://res.cloudinary.com/dpfv7ok9y/image/upload/v1585971909/iconoPredeterminado_te0kwd.ico">
+
+                    <button type="button" id="btnSeleccionarIcono" class="botonIcono">Cambiar Ícono</button>
+
+                </div>
+
+                <div>
+                    <button type="button" id="btnGuardar">REGISTRAR</button>
+                </div>
+
+            </div>
+
+        </form>
+
+        <footer>
+            <div id="footer">
+                <div class="espacio1">
+                    <a id="face" href="http://www.facebook.com" target="blank">
+                        <i class="fab fa-facebook fa-3x"></i>
+                    </a>
+                    <a id="twit" href="https://twitter.com/?lang=es" target="blank">
+                        <i class="fab fa-twitter fa-3x"></i>
+                    </a>
+                    <a id="instagram" href="https://www.instagram.com/?hl=es-la" target="blank">
+                        <i class="fab fa-instagram fa-3x"></i>
+                    </a>
+                </div>
+                <div id="piePagina">
+                    <p>Derechos Reservados © 2020</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+
+    <script src="Public/js/registroServicioCategoria.js"></script>
+    <script src="Public/js/registroControladorCategoria.js"></script>
+    <script src="Public/js/servicioIcono.js"></script>
+</body>
+
+</html>

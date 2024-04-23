@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil usuarios</title>
+    <link rel="stylesheet" href="../Public/css/perfil_especializado.css">
+</head>
+
+<body>
+    <header class="fondo1">
+        <nav class="navegacion">
+            <div class="logo">
+                <a href="#">VIAJE SEGURO™</a>
+            </div>
+            <ul class="menu">
+                <li class="navRight"><a href="#">Registrar usuarios</a>
+                    <ul class="submenu">
+                        <li><a href="#">Registrar usuarios especializados</a></li>
+                        <li><a href="#">Registrar usuarios encargados de ruta</a></li>
+                        <li><a href="#">Registrar usuarios normales</a></li>
+                        <li><a href="/listar_usuarios.html">Lista de usuarios</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Registrar Siniestro</a></li>
+                <li><a href="#">Solicitar Asistencia</a></li>
+                <li><a href="#">Registrar Vehiculo</a></li>
+                <li><a href="#">Opciones</a>
+                    <ul class="submenu">
+                        <li><a href="#">Ver Perfil</a></li>
+                        <li><a id="cerrarSesion" href="#">Cerrar Sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="tituloPerfil">
+        <h1>Mi Perfil</h1>
+        <button id="btnEditarPerfil" type="button">Editar</button>
+    </div>
+    <div id="perfilContenedor">
+        <div id="fotoContenedor">
+            <div id="divImgPerfil">
+                <img id="imgPerfil" src="" alt="">
+            </div>
+            <div id="nombreUsuario">
+                <h2 id="nombre"></h2>
+                <h2 id="Apellido"></h2>
+            </div>
+            <div class="usuarioPersonalInfo">
+                <p class="paraUno">Usuario:</p>
+                <p id="usuarioCorreo" class="paraDos"></p>
+            </div>
+            <div class="usuarioPersonalInfo">
+                <p class="paraUno">Contraseña:</p>
+                <p id="usuarioPass" class="paraDos"></p>
+            </div>
+            <div class="usuarioPersonalInfo">
+                <p class="paraUno">Identificacion:</p>
+                <p id="usuarioId" class="paraDos"></p>
+            </div>
+        </div>
+        <div id="perfilInfoContenedor">
+            <div class="tituloInfo">
+                <h2>Informacion</h2>
+            </div>
+            <div class="contenedorInfo">
+                <div class="colUno">
+                    <div class="paraUnoX2">
+                        <div class="usuarioPersonalInfoX2">
+                            <p class="paraUno">Nombre:</p>
+                            <p id="nombreX2" class="paraDos"></p>
+                        </div>
+                    </div>
+                    <div class="paraUnoX2">
+                        <div class="usuarioPersonalInfoX2">
+                            <p class="paraUnoX2">Apellido:</p>
+                            <p id="apellidoX2" class="paraDos"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="colDos">
+                    <div class="paraUnoX2">
+                        <div class="usuarioPersonalInfoX2">
+                            <p class="paraUno">Persona:</p>
+                            <p id="tipoDePersona" class="paraDos"></p>
+                        </div>
+                    </div>
+                    <div class="paraUnoX2">
+                        <div class="usuarioPersonalInfoX2">
+                            <p class="paraUnoX2">Identificacion:</p>
+                            <p id="numeroDeIdentificacionX2" class="paraDos"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ---------------------------- -->
+            <div class="contenedorInfo">
+                <div class="colUno">
+                    <div class="paraUnoX2">
+                        <div class="usuarioPersonalInfoX2">
+                            <p class="paraUno">Telefono:</p>
+                            <p id="telefono" class="paraDos"></p>
+                        </div>
+                    </div>
+                    <div class="paraUnoX2">
+                        <div class="usuarioPersonalInfoX2">
+                            <p class="paraUnoX2">Correo:</p>
+                            <p id="txtCorreoX2" class="paraDos"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="colDos">
+                    <div class="paraUnoX2">
+                        <div class="usuarioPersonalInfoX2">
+                            <p class="paraUno">Provincia:</p>
+                            <p id="provincia" class="paraDos"></p>
+                        </div>
+                    </div>
+                    <div class="paraUnoX2">
+                        <div class="usuarioPersonalInfoX2">
+                            <p class="paraUnoX2">Canton:</p>
+                            <p id="canton" class="paraDos"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ----------------------------- -->
+            <div class="contenedorInfo">
+                <div class="colUno">
+                    <div class="paraUnoX2">
+                        <div class="usuarioPersonalInfoX2">
+                            <p class="paraUno">Profesión:</p>
+                            <p id="profesion" class="paraDos"></p>
+                        </div>
+                    </div>
+                    <div class="paraUnoX2">
+                        <div class="usuarioPersonalInfoX2">
+                            <p class="paraUnoX2">Monto base:</p>
+                            <p id="montoBase" class="paraDos"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="colDos">
+                    <div class="paraUnoX2">
+                        <div class="usuarioPersonalInfoX2">
+                            <p class="paraUno">Distrito:</p>
+                            <p id="distrito" class="paraDos"></p>
+                        </div>
+                    </div>
+                    <div class="paraUnoX2">
+                        <div class="usuarioPersonalInfoX2">
+                            <p class="paraUnoX2">Tarifa:</p>
+                            <p id="tarifaPlataforma" class="paraDos"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tituloInfo">
+                <h2>Categorias</h2>
+            </div>
+            <div id="contenedorCategorias">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <div class="espacio1">
+                <a id="face" href="http://www.facebook.com" target="blank">
+                    <i class="fab fa-facebook fa-3x"></i>
+                </a>
+                <a id="twit" href="https://twitter.com/?lang=es" target="blank">
+                    <i class="fab fa-twitter fa-3x"></i>
+                </a>
+                <a id="instagram" href="https://www.instagram.com/?hl=es-la" target="blank">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </a>
+            </div>
+            <div id="piePagina">
+                <p>Derechos Reservados © 2020</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../Public/js/servicio_usuarios.js"></script>
+    <script src="../Public/js/registroControlador_perfil_UE.js"></script>
+</body>
+
+</html>

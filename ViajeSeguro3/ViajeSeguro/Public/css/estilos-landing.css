@@ -1,0 +1,357 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header nav a {
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #FA6900;
+    transition: 0.6s;
+}
+
+header .brand {
+    color: #fff;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    float: left;
+    font-size: 20px;
+    margin-left: 100px;
+    position: absolute;
+    top: 50px;
+}
+
+header .uno {
+    color: #fff;
+    float: right;
+    font-size: 32px;
+    margin-left: 900px;
+    margin-right: 400px;
+    position: absolute;
+    top: 50px;
+}
+
+header .dos {
+    color: #fff;
+    float: right;
+    font-size: 32px;
+    margin-left: 1010px;
+    position: absolute;
+    top: 50px;
+}
+
+header .tres {
+    float: right;
+    font-size: 32px;
+    position: absolute;
+    right: 100px;
+    top: 50px;
+}
+
+.tres a {
+    color: #FA6900 !important;
+}
+
+.tres a:hover {
+    color: rgb(235, 110, 20) !important;
+}
+
+header {
+    display: flow-root;
+}
+
+#sct_banner-principal {
+    background-image: url(../img/carro-2.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+    height: 100%;
+    max-height: 657px;
+    width: 100%;
+}
+
+.titulo {
+    margin: 0 auto;
+    margin-left: 550px;
+    padding-top: 200px;
+    padding-bottom: 290px;
+    width: 50%;
+}
+
+#sct_banner-principal .titulo h1 {
+    color: #fff;
+    font-size: 32px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.titulo h3 {
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.titulo button {
+    background-color: transparent;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bolder;
+    margin-top: 50px;
+    margin-left: 280px;
+    padding: 13px;
+}
+
+.titulo button:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.6s;
+}
+
+.logos {
+    display: flow-root;
+    height: 100%;
+    max-height: 657px;
+    width: 100%;
+}
+
+.logos .imagenes1 {
+    background-image: url(../img/moptLogo.png);
+    background-size: cover;
+    float: left;
+    margin-top: 40px;
+    margin-left: 300px;
+    height: 180px;
+    max-height: 100%;
+    max-width: 100%;
+    width: 330px;
+}
+
+.logos .imagenes2 {
+    background-image: url(../img/cneLogo.png);
+    background-size: cover;
+    float: right;
+    margin-right: 300px;
+    height: 250px;
+    max-height: 70%;
+    max-width: 70%;
+    width: 250px;
+}
+
+.contenidoLanding {
+    display: flow-root;
+    height: 100%;
+    margin-top: 120px;
+    width: 100%;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.contenidoLanding .parte1,
+.contenidoLanding .parte2 {
+    float: left;
+    margin: 30px 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 45%;
+}
+
+.contenidoLanding h2 {
+    font-size: 30px;
+    font-weight: bolder;
+    padding-top: 100px;
+    margin-left: 110px;
+}
+
+.contenidoLanding p {
+    font-size: 15px;
+    padding-top: 40px;
+    margin-left: 110px;
+}
+
+.contenidoLanding .imgCaptura {
+    background-image: url(../img/capturaProyecto.PNG);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    border: 2px;
+    margin: 40px auto;
+    height: 240px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    width: 100%;
+}
+
+.contenidoLanding .imgCaptura2 {
+    background-image: url(../img/capturaProyecto1.PNG);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    border: 2px;
+    margin: 40px auto;
+    height: 240px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    width: 100%;
+}
+
+.contenidoLanding .imgCaptura3 {
+    background-image: url(../img/capturaProyecto2.PNG);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    border: 2px;
+    margin: 40px auto;
+    height: 240px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    width: 100%;
+}
+
+.contenidoLanding hr {
+    background-color: #707070;
+    border: none;
+    height: 2px;
+    margin: 0 auto;
+    width: 85%;
+}
+
+#contactoLanding {
+    background: #000;
+    width: 100%;
+    height: 940px;
+    padding-bottom: 30px;
+    margin-bottom: 200px;
+}
+
+.titulo4 h2 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.formC1 input {
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 140px;
+    margin-left: 248px;
+    margin-bottom: 40px;
+}
+
+.formC1 label {
+    color: #fff;
+    margin-left: 395px;
+}
+
+.formC2 input {
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 175px;
+    margin-bottom: 90px;
+}
+
+.formC2 label {
+    color: #fff;
+    margin-left: 395px;
+}
+
+.formC3 textarea {
+    border-radius: 6px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 80px;
+    margin-bottom: 90px;
+    padding-bottom: 50px;
+    padding-right: 130px;
+}
+
+.formC3 label {
+    color: #fff;
+    margin-left: 320px;
+}
+
+.boton2 {
+    background-color: transparent;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 50px;
+    margin-left: 635px;
+    padding: 15px;
+}
+
+.boton2:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.6s;
+}
+
+footer {
+    margin-top: 2550px;
+    font-weight: bold;
+    height: 213px;
+    background-color: #000;
+}
+
+footer a {
+    margin-right: 20px;
+}
+
+#piePagina {
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+#face,
+#instagram,
+#twit {
+    font-size: 5px;
+    border: 2px solid #fff;
+    padding: 3px;
+    margin-top: 100px;
+    display: inline-block;
+    background-color: #fff;
+    color: black;
+    border-radius: 3px;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 60px 1fr;
+}
+
+.espacio1 {
+    grid-column: 3/5;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#piePagina {
+    display: flex;
+    grid-column: 3/5;
+    grid-row: 2;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 90px;
+}

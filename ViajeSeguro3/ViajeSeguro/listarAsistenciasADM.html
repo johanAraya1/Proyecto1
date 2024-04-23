@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceptar Solicitud De Asistencia</title>
+    <link rel="stylesheet" href="./Public/css/listarAsistenciasADM.css">
+</head>
+
+<body>
+    <header class="fondo1">
+        <nav class="navegacion">
+            <div class="logo">
+                <a href="listarSiniestrosADM.html"><b>VIAJE SEGURO™</b></a>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Registrar usuarios</a>
+                    <ul class="submenu">
+                        <li><a href="registro_usuario_especializado.html">Registrar usuarios especializados</a></li>
+                        <li><a href="RegistrarUER.html">Registrar usuarios encargados de ruta</a></li>
+                        <li><a href="registrarUsuarioNormalADM.html">Registrar usuarios normales</a></li>
+                        <li><a href="listar_usuarios.html">Lista de usuarios</a></li>
+                    </ul>
+                </li>
+                <li><a href="listarCategoria.html">Categorías</a></li>
+                <li><a href="registrarRutasADM.html">Registrar ruta</a></li>
+                <li><a href="RegistrarSiniestroADM.html">Registrar siniestro</a></li>
+                <li><a href="registrarSolicitud AsistenciaADM.html">Solicitar asistencia</a></li>
+
+                <li><a href="listarVehiculosADM.html">Registrar vehiculo</a>
+                    <ul class="submenu">
+                        <li><a href="listarTipoVehiculos.html">Tipos de vehículos</a></li>
+                        <li><a href="caracteristicas.html">Caracteristicas</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Opciones</a>
+                    <ul class="submenu">
+                        <li><a href="listarTarjetasCreditoADM.html">Registrar método de pago</a></li>
+                        <li><a href="#" onclick="redirectLogout();">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="formGuide">
+        <h2 class="heading">Lista de solicitudes de asistencia</h2>
+        <input type="text" id="filtrarAsistencias" placeholder="Buscar">
+        <span id="resultadoFiltrar"></span>
+    </div>
+
+    <div id="listaSolicitudAsistencias">
+        <div class="tituloC">
+            <h2>Asistencia</h2>
+        </div>
+        <div class="tituloC">
+            <h2>Descripcion</h2>
+        </div>
+        <div class="tituloC">
+            <h2>Nombre</h2>
+        </div>
+        <div class="tituloC">
+            <h2>Provincia</h2>
+        </div>
+        <div class="tituloC">
+            <h2>Canton</h2>
+        </div>
+        <div class="tituloC">
+            <h2>Distrito</h2>
+        </div>
+        <div class="tituloC">
+            <h2></h2>
+        </div>
+        <div class="tituloC">
+            <h2></h2>
+        </div>
+        <div class="tituloC">
+            <h2></h2>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="../Public/js/servicioListarAsistencias.js"></script>
+    <script src="../Public/js/listarAsistenciasControladorADM.js"></script>
+</body>
+
+</html>

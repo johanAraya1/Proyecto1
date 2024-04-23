@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro de Vehículos</title>
+    <link rel="stylesheet" href="./Public/css/reset.css">
+    <link rel="stylesheet" href="./Public/css/general.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <header class="fondo1">
+        <nav class="navegacion">
+            <div class="logo">
+                <a href="#"><b>VIAJE SEGURO™</b></a>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Registrar siniestro</a></li>
+                <li><a href="#">Solicitar asistencia</a></li>
+                <li><a href="#">Registrar vehiculo</a></li>
+                <li><a href="#">Opciones</a>
+                    <ul class="submenu">
+                        <li><a href="#">Registrar método de pago</a></li>
+                        <li><a href="#">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="grid">
+            <div id="lineaIzquierda">
+                <hr>
+            </div>
+            <div id="titulo">
+                <h1>Registro de Vehículos</h1>
+            </div>
+            <div id="lineaDerecha">
+                <hr>
+            </div>
+        </div>
+
+        <div class="gridForm">
+
+            <div>
+                <img id="foto">
+
+                <div id="btnSubirFoto">
+                    <button type="button" id="btnFoto">Subir foto</button>
+                </div>
+
+
+            </div>
+
+            <div id="inputTipoVehiculo">
+                <label for="sltTipoVehículo"> <span>*</span></label>
+                <select id="sltTipoVehiculo" required>
+                 <option value="">Seleccione el tipo de vehículo</option>
+                 <option value=""></option>
+
+                 <!-- <option value="Ambulancia">Ambulancia</option>
+                 <option value="Bomberos">Bomberos</option>
+                 <option value="Grúa">Grúa</option>
+                 <option value="Motocicleta">Motocicleta</option>
+                 <option value="Particular">Particular</option>
+                 <option value="Patrulla">Patrulla</option>
+                 <option value="transporteCarga">transporteCarga</option>
+                 <option value="transporteMercancías">transporteMercancías</option>
+                 <option value="transportePersonas">transportePersonas</option> -->
+
+                </select>
+            </div>
+
+            <!-- <div id="inputPropietario">
+                <label for="sltPropietario"> <span>*</span>Propietario</label>
+                <select id="sltPropietario" required>
+                    <option value="">aqui debe cargar la lista de usuarios normales</option>
+                    </select>
+                    
+            </div> -->
+
+            <div id="labelPlaca">
+                <label for="txtPlaca"><span>*</span>Placa</label></div>
+            <div id="inputPlaca">
+                <input type="text" id="txtPlaca" required>
+            </div>
+
+            <div id="labelMarca">
+                <label for="txtMarca"><span>*</span>Marca</label></div>
+            <div id="inputMarca"> <input type="text" id="txtMarca" required>
+            </div>
+
+            <div id="labelModelo">
+                <label for="txtModelo"><span>*</span>Modelo</label></div>
+            <div id="inputModelo">
+                <input type="text" id="txtModelo" required>
+            </div>
+
+            <div id="labelAno">
+                <label for="numAno"><span>*</span>Año</label></div>
+            <div id="inputAno">
+                <input type="number" id="numAno" required>
+            </div>
+
+            <div id="labelColor">
+                <label for="txtColor"><span>*</span>Color</label>
+            </div>
+            <div id="inputColor">
+                <input type="text" id="txtColor" required>
+            </div>
+
+            <div id="labelEstilo">
+                <label for="sltEstilo"> <span>*</span>Estilo</label>
+            </div>
+            <div id="inputEstilo">
+                <select id="sltEstilo" required>
+                 <option value="">Seleccione un estilo</option>
+                 <option value="Automóvil">Automóvil</option>
+                 <option value="Bus">Bus</option>
+                 <option value="Camión">Camión</option>
+                 <option value="Equipo Especial">Equipo especial</option>
+                 <option value="Microbus">Microbus</option>
+                 <option value="Motocicleta">Motocicleta</option>
+                 <option value="Pickup">Pickup</option>
+                 <option value="Todo Terreno">Todo terreno</option>
+                 <option value="Utilitario">Utilitario</option>
+                 </select>
+            </div>
+
+            <div id=tablaCaract>
+
+                <div>
+                    <table id="tblCaracteristicasEspeciales">
+                        <thead>
+                            <tr>
+                                <th>Caracteristicas Adicionales:</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="CaracEsp">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div>
+            <button type="button" id="btnGuardar">REGISTRAR</button>
+        </div>
+
+        <footer>
+            <div id="footer">
+                <div class="espacio1">
+                    <a id="face" href="http://www.facebook.com" target="blank">
+                        <i class="fab fa-facebook fa-3x"></i>
+                    </a>
+                    <a id="twit" href="https://twitter.com/?lang=es" target="blank">
+                        <i class="fab fa-twitter fa-3x"></i>
+                    </a>
+                    <a id="instagram" href="https://www.instagram.com/?hl=es-la" target="blank">
+                        <i class="fab fa-instagram fa-3x"></i>
+                    </a>
+                </div>
+                <div id="piePagina">
+                    <p>Derechos Reservados © 2020</p>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script src="./Public/js/registroServicio.js"></script>
+        <script src="./Public/js/listarCaracteristicasEspecialesControlador.js"></script>
+        <script src="./Public/js/listarTipoDeVehiculoControlador.js"></script>
+        <script src="./Public/js/registroControlador.js"></script>
+        <script src="./Public/js/servicioFoto.js"></script>
+        <script src="./Public/js/modificarVehiculoControlador.js"></script>
+    </main>
+
+
+
+</body>
+
+</html>

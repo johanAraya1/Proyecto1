@@ -1,0 +1,79 @@
+.tablaSiniestros {
+    display: grid;
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#contenedorSiniestros {
+    display: grid;
+}
+
+#tblSiniestros {
+    margin-top: 50px;
+    color: #707070;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#filtro {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.btnModificar {
+    margin-left: 75px;
+    padding: 10px;
+}
+
+.btnEliminar {
+    margin-left: 75px;
+    padding: 10px;
+}
+
+.mostrarDescripcion {
+    margin-left: 50px;
+    width: 250px;
+}
+
+h3 {
+    font-size: 15px;
+    text-align: center;
+    color: #707070;
+}
+
+#txtFiltro {
+    padding: 5px;
+    margin: 10px;
+    width: 300px;
+    border-color: #009879;
+    text-align: center;
+}
+
+.registrarSiniestro {
+    margin-top: 20px;
+    margin-right: 265px;
+    font-size: 30px;
+    float: right;
+    width: 50px;
+    height: 50px;
+}
+
+.registrarSiniestro:hover {
+    color: rgb(221, 176, 176);
+    transition: all .3s;
+}
+
+.btnEliminar:hover {
+    color: rgb(221, 176, 176);
+    transition: all .3s;
+}
+
+.btnModificar:hover {
+    color: rgb(221, 176, 176);
+    transition: all .3s;
+}

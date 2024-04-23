@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Public/css/estilosReporteUE.css">
+</head>
+
+<body>
+    <header class="fondo1">
+        <nav class="navegacion">
+            <div class="logo">
+                <a href="#">VIAJE SEGURO™</a>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Reportes</a>
+                    <ul class="submenu">
+                        <li><a href="reporteUsuarioEspecializado.html">Usuario especializado</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Registrar usuarios</a>
+                    <ul class="submenu">
+                        <li><a href="#">Registrar usuarios especializados</a></li>
+                        <li><a href="#">Registrar usuarios encargados de ruta</a></li>
+                        <li><a href="#">Registrar usuarios normales</a></li>
+                        <li><a href="#">Lista de usuarios</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Registrar Siniestro</a></li>
+                <li><a href="#">Solicitar Asistencia</a></li>
+                <li><a href="#">Registrar Vehiculo</a></li>
+                <li><a href="#">Opciones</a>
+                    <ul class="submenu">
+                        <li><a href="#">Registrar método de pago</a></li>
+                        <li><a href="#">Cerrar Sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="buscarUsuario">
+        <input type="text" placeholder="Buscar" id="inputBuscar"></div>
+    <table id="tablaUsuarios">
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>Tipo de usuario</th>
+                <th>Cédula</th>
+                <th>Nombre</th>
+                <th>Primer apellido</th>
+                <th>Correo</th>
+                <th>Numero de telefono</th>
+                <th>Provincia</th>
+                <th>Cantón</th>
+                <th>Distrito</th>
+                <th>Profesión</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../Public/js/servicio_usuarios.js"></script>
+    <script src="../Public/js/registroControladorReporteUsuarioEspecializado.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion {
+    width: 100%;
+    background: #000;
+    display: flex;
+}
+
+.menu {
+    margin-left: 63%;
+}
+
+.navegacion ul {
+    list-style: none;
+}
+
+.logo {
+    /* float: left; */
+    /* margin-top: 30px; */
+    /* padding-bottom: 10px; */
+    align-self: center;
+    padding-left: 44px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu>li {
+    display: inline-block;
+}
+
+.menu>li>a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: rgb(221, 176, 176);
+    transition: all .3s;
+}
+
+.submenu {
+    position: absolute;
+    background: #333333;
+    width: 10%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+}
+
+#divImgPerfil {
+    height: 220px;
+    width: 100%;
+}
+
+#imgPerfil {
+    height: 100%;
+    width: 100%;
+}
+
+#tituloPerfil {
+    margin-left: 210px;
+    display: grid;
+    grid-template-columns: 260px 260px;
+}
+
+#tituloPerfil h1 {
+    margin: 65px 0 0 65px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 32px;
+    justify-self: flex-end;
+}
+
+#btnEditarPerfil {
+    height: 36px;
+    width: 136px;
+    align-self: flex-end;
+    margin-left: 35px;
+    background-color: #009879;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 7px;
+    border: none;
+}
+
+#perfilContenedor {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+#fotoContenedor {
+    width: 320px;
+    height: 420px;
+    background-color: white;
+}
+
+#perfilInfoContenedor {
+    width: 600px;
+    height: auto;
+    margin-left: 20px;
+    background-color: white;
+}
+
+#nombreUsuario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 2px solid #009879;
+}
+
+#nombre {
+    padding-right: 5px;
+}
+
+.usuarioPersonalInfo {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-bottom: 1px solid #009879;
+    font-size: 18px;
+}
+
+.usuarioPersonalInfo .paraUno {
+    margin-left: 20px;
+}
+
+.paraUno {
+    font-weight: bold;
+}
+
+.usuarioPersonalInfo .paraDos {
+    margin-left: 10px;
+}
+
+.tituloInfo {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid #009879;
+}
+
+.colUno {
+    display: grid;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.paraUnoX2 {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* border-bottom: 1px solid #009879; */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.usuarioPersonalInfoX2 {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    /* border-bottom: 1px solid #009879; */
+    font-size: 18px;
+}
+
+.usuarioPersonalInfoX2 .paraDos {
+    margin-left: 10px;
+    font-weight: normal;
+}
+
+.contenedorInfo {
+    padding: 20px 0 0 20px;
+    display: grid;
+    grid-template-columns: 335px auto;
+    justify-content: stretch;
+}
+
+footer {
+    font-weight: bold;
+    height: 140px;
+    background-color: #000;
+}
+
+footer a {
+    margin-right: 20px;
+}
+
+#piePagina {
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+#face,
+#instagram,
+#twit {
+    font-size: 5px;
+    border: 2px solid #fff;
+    padding: 3px;
+    margin-top: 30px;
+    display: inline-block;
+    background-color: #fff;
+    color: black;
+    border-radius: 3px;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 60px 1fr;
+}
+
+.espacio1 {
+    grid-column: 3/5;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#piePagina {
+    display: flex;
+    grid-column: 3/5;
+    grid-row: 2;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.inputCategorias {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#contenedorCategorias {
+    margin: 30px 0 50px 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+}
+
+#contenedorCategorias li {
+    padding: 3px 0 3px 0;
+}
+
+.botoneditarCategorias {
+    text-align: center;
+}
+
+.botoneditarCategorias {
+    height: 36px;
+    width: 136px;
+    align-self: flex-end;
+    margin-left: 35px;
+    background-color: #009879;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 7px;
+    border: none;
+}

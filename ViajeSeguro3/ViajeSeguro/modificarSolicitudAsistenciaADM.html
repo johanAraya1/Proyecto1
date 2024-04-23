@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>VIAJE SEGURO™</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Public/css/reset.css">
+    <link rel="stylesheet" href="../Public/css/estilos.css">
+    <link rel="stylesheet" href="../Public/css/general.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+
+<body>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" type="text/css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+
+    <header class="fondo1">
+        <nav class="navegacion">
+            <div class="logo">
+                <a href="listarSiniestrosADM.html"><b>VIAJE SEGURO™</b></a>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Registrar usuarios</a>
+                    <ul class="submenu">
+                        <li><a href="registro_usuario_especializado.html">Registrar usuarios especializados</a></li>
+                        <li><a href="RegistrarUER.html">Registrar usuarios encargados de ruta</a></li>
+                        <li><a href="registrarUsuarioNormalADM.html">Registrar usuarios normales</a></li>
+                        <li><a href="listar_usuarios.html">Lista de usuarios</a></li>
+                    </ul>
+                </li>
+                <li><a href="listarCategoria.html">Categorías</a></li>
+                <li><a href="registrarRutasADM.html">Registrar ruta</a></li>
+                <li><a href="RegistrarSiniestroADM.html">Registrar siniestro</a></li>
+                <li><a href="registrarSolicitud AsistenciaADM.html">Solicitar asistencia</a></li>
+
+                <li><a href="listarVehiculosADM.html">Registrar vehiculo</a>
+                    <ul class="submenu">
+                        <li><a href="listarTipoVehiculos.html">Tipos de vehículos</a></li>
+                        <li><a href="caracteristicas.html">Caracteristicas</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Opciones</a>
+                    <ul class="submenu">
+                        <li><a href="listarTarjetasCreditoADM.html">Registrar método de pago</a></li>
+                        <li><a href="#" onclick="redirectLogout();">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contenido">
+            <div class="titulo">
+                <h1>Modificar Solicitud de Asistencia</h1>
+            </div>
+            <form>
+
+                <div class="col1">
+                    <div class="subCol">
+
+                        <label for="usuario"><span>*</span>Usuario:</label>
+                        <textarea id="usuario" disabled></textarea>
+
+                        <div id="inputTipoDeSiniestro">
+                            <label for="sltTipoDeSiniestroAsist"><span>*</span>Tipo de Asistencia:</label>
+                        </div>
+
+                        <div id="selectCategoria">
+                            <select id="sltTipoDeSiniestroAsist" required>
+                             <!-- <option value="">Seleccione el tipo de siniestro</option> -->
+                            <option value=""></option>
+                            </select>
+                        </div>
+
+                        <label for="txtDescripcion"><span>*</span>Descripción:</label>
+                        <textarea id="txtDescripcion" cols="30" rows="10" required></textarea>
+                    </div>
+                </div>
+
+                <div class="col2">
+                    <div id="map"></div>
+                    <pre id="coordinates" class="coordinates"></pre>
+                </div>
+                <div id="gridProvincias">
+                    <div id="ProvinciaGrid">
+                        <label for="sltProvincia"><span>*</span>Provincia</label>
+                        <div id="ProvinciaTxtGrid">
+                            <select id="sltProvincia" name="sltProvincia    " class="inputStyle" required>
+							<option value="">Seleccione</option>
+							</select>
+                        </div>
+                    </div>
+
+
+                    <div id="CantonGrid">
+                        <label for="sltCanton"><span>*</span>Canton</label>
+                        <div id="CantonTxtGrid">
+                            <select id="sltCanton" name="sltCanton" class="inputStyle" required>
+							<option value="">Seleccione</option>
+						</select>
+                        </div>
+                    </div>
+
+
+                    <div id="DistritoGrid">
+                        <label for="sltDistrito"><span>*</span>Distrito</label>
+                        <div id="DistritoTxtGrid">
+                            <select id="sltDistrito" name="sltDistrito" class="inputStyle" required>
+							<option value="">Seleccione</option>
+						</select>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col3">
+                    <div class="botonS">
+                        <input type="button" value="Modificar" id="btnModificar">
+                    </div>
+                </div>
+
+            </form>
+
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer">
+            <div class="espacio1">
+                <a id="face" href="http://www.facebook.com" target="blank">
+                    <i class="fab fa-facebook fa-3x"></i>
+                </a>
+                <a id="twit" href="https://twitter.com/?lang=es" target="blank">
+                    <i class="fab fa-twitter fa-3x"></i>
+                </a>
+                <a id="instagram" href="https://www.instagram.com/?hl=es-la" target="blank">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </a>
+
+            </div>
+            <div id="piePagina">
+                <p>Derechos Reservados © 2020</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="./Public/js/mapa.js"></script>
+    <script src="./Public/js/registro-servicio.js"></script>
+
+    <script src="./Public/js/registroControladorSolicitudAsistencias.js"></script>
+
+    <script src="./Public/js/registroServicio.js"></script>
+
+    <!-- <script src="./Public/js/registro-controlador.js"></script> -->
+    <script src="./Public/js/servicioUbicacionSenas.js"></script>
+    <script src="./Public/js/listarUbicacionSenas.js"></script>
+    <script src="./Public/js/listarCategoriasControladorAsistencias.js"></script>
+
+
+
+</body>
+
+</html>

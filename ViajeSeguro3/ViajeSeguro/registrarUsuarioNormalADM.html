@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro de Usuario Regular</title>
+    <link rel="stylesheet" href="../Public/css/reset.css">
+    <link rel="stylesheet" href="../Public/css/registrarUsuarioNormal.css">
+</head>
+
+<body>
+    <main>
+        <header class="fondo1">
+            <nav class="navegacion">
+                <div class="logo">
+                    <a href="listarSiniestrosADM.html"><b>VIAJE SEGURO™</b></a>
+                </div>
+                <ul class="menu">
+                    <li><a href="#">Registrar usuarios</a>
+                        <ul class="submenu">
+                            <li><a href="registro_usuario_especializado.html">Registrar usuarios especializados</a></li>
+                            <li><a href="RegistrarUER.html">Registrar usuarios encargados de ruta</a></li>
+                            <li><a href="registrarUsuarioNormalADM.html">Registrar usuarios normales</a></li>
+                            <li><a href="listar_usuarios.html">Lista de usuarios</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="listarCategoria.html">Categorías</a></li>
+                    <li><a href="registrarRutasADM.html">Registrar ruta</a></li>
+                    <li><a href="RegistrarSiniestroADM.html">Registrar siniestro</a></li>
+                    <li><a href="registrarSolicitud AsistenciaADM.html">Solicitar asistencia</a></li>
+
+                    <li><a href="listarVehiculosADM.html">Registrar vehiculo</a>
+                        <ul class="submenu">
+                            <li><a href="listarTipoVehiculos.html">Tipos de vehículos</a></li>
+                            <li><a href="caracteristicas.html">Caracteristicas</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Opciones</a>
+                        <ul class="submenu">
+                            <li><a href="listarTarjetasCreditoADM.html">Registrar método de pago</a></li>
+                            <li><a href="#" onclick="redirectLogout();">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="formulario">
+            <div class="titulo">
+                <hr class="sinBorderIzquierdo">
+                <h1>Registrar Usuario Normal</h1>
+                <hr class="sinBorderDerecho">
+            </div>
+            <form id="formularioUsuarioRegular">
+                <fieldset>
+                    <legend>*Primer Nombre</legend>
+                    <div>
+                        <input type="text" id="inputPrimerNombre" tabIndex="1" required>
+                    </div>
+                    <span id='estadoNombre'></span>
+                </fieldset>
+                <fieldset>
+                    <legend>Segundo Nombre</legend>
+                    <div>
+                        <input type="text" id="inputSegundoNombre" tabIndex="2">
+                    </div>
+                    <span id='estadoNombre2'></span>
+                </fieldset>
+                <fieldset>
+                    <legend>*Primer Apellido</legend>
+                    <div>
+                        <input type="text" id="inputPrimerApellido" tabIndex="3">
+                    </div>
+                    <span id='estadoApellido'></span>
+                </fieldset>
+                <fieldset>
+                    <legend>Segundo Apellido</legend>
+                    <div>
+                        <input type="text" id="inputSegundoApellido" tabIndex="4">
+                    </div>
+                    <span id='estadoApellido2'></span>
+                </fieldset>
+                <fieldset>
+                    <legend>*Tipo de Persona</legend>
+                    <div class="radioButton1">
+                        <select id="tipoPersona" oninput="validarTipoPersona()" tabIndex="5">
+                        <option value="">--Seleccione una opción</option>
+                        <option value="fisica">Persona Física</option>
+                        <option value="juridica">Persona Jurídica</option>
+                    </select>
+                    </div>
+                </fieldset>
+                <fieldset class="identificacionDeUsuario">
+                    <legend>*Identificación</legend>
+                    <div>
+                        <input type="text" id="inputIdentificacion" tabIndex="8" required>
+                    </div>
+                    <span id="identificacionCorrecta"></span>
+                </fieldset>
+                <fieldset class="radioContenedor">
+                    <legend>*Genero</legend>
+                    <div class="radioButton2">
+                        <div class="flexRadioDerecho" id="inputGenero" tabIndex="6">
+                            <div>
+                                <label for="radioMasculino">Masculino</label>
+                                <input type="radio" name="radioGenero" id="radioMasculino" onchange="validarGenero();" value="Masculino">
+                            </div>
+                            <div>
+                                <label for="radioFemenino">Femenino</label>
+                                <input type="radio" name="radioGenero" id="radioFemenino" onchange="validarGenero();" value="Femenino">
+                            </div>
+                            <div>
+                                <label for="radioNoDefine">Otro</label>
+                                <input type="radio" name="radioGenero" id="radioNoDefine" onchange="validarGenero();" value="Otro">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>*Teléfono</legend>
+                    <div class="telefono">
+                        <input type="text" id="numeroTelefonico" tabIndex="9" required>
+                    </div>
+                </fieldset>
+                <fieldset class="inputCorreo">
+                    <legend>*Correo Electrónico</legend>
+                    <div>
+                        <input type="email" id="correo" tabIndex="10" required>
+                    </div>
+                </fieldset>
+                <fieldset class="tipoDeCedula">
+                    <legend>*Tipo de Identificación</legend>
+                    <div class="selectTipoCedula">
+                        <select id="tipoCedula" oninput="validarInputs();" tabIndex="7" required>
+                            <option value="">--Selecciona una opción--</option>
+                            <option value="Nacional">Nacional</option>
+                            <option value="Residencia">DIMEX</option>
+                            <option value="Extranjero">Pasaporte</option>
+                            <option value="Juridica">Jurídica</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>*Contraseña</legend>
+                    <div>
+                        <input type="password" id="pwd" oninput="validacionPassword();" tabIndex="11" required>
+                        <div class="requisitosPassword">
+                            <span id='complejidadPwd'></span>
+                            <span id='complejidadPwd2'></span>
+                            <span id='complejidadPwd3'></span>
+                            <span id='complejidadPwd4'></span>
+                            <span id='complejidadPwd5'></span>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="confirmarPassword">
+                    <legend>*Confirmar Contraseña</legend>
+                    <div>
+                        <input type="password" id="confirmacionPwd" oninput="validacionPassword();" tabIndex="12" required>
+                        <div>
+                            <span id='estadoPwd'></span>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class=campoFoto>
+                    <legend>Adjuntar Fotografía:</legend>
+                    <figure>
+                        <img id="fotografiaUsuario" src="https://res.cloudinary.com/buhosapiens/image/upload/v1586048609/male-icon.png">
+
+                    </figure>
+                    <button type="button" id="botonSubirImagen" tabIndex="13">Explorar</button>
+                </fieldset>
+            </form>
+            <div class="botonRegistrar">
+                <button type="button" id="enviarFormulario" tabIndex="14">REGISTRAR</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer">
+            <div class="espacio1">
+                <a id="face" href="http://www.facebook.com" target="blank">
+                    <i class="fab fa-facebook fa-3x"></i>
+                </a>
+                <a id="twit" href="https://twitter.com/?lang=es" target="blank">
+                    <i class="fab fa-twitter fa-3x"></i>
+                </a>
+                <a id="instagram" href="https://www.instagram.com/?hl=es-la" target="blank">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </a>
+            </div>
+            <div id="piePagina">
+                <p>Derechos Reservados © 2020</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="../Public/js/registroUsuarioNormalServicio.js"></script>
+    <script src="../Public/js/imagenServicio.js"></script>
+    <script src="../Public/js/registroUsuarioNormalControlador.js"></script>
+</body>
+
+</html>

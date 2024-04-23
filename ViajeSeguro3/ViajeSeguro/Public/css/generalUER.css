@@ -1,0 +1,912 @@
+/* Con esta clase aplica el borde en rojo para las validaciones */
+
+.inputError {
+    border: 2px solid #ee5253;
+}
+
+
+/* Acá le doy la tipografía que vamos a utilizar en toda la página */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Acá trabajo con los estilos del nav */
+
+nav {
+    background-color: black;
+    font-weight: bold;
+    height: 50px;
+}
+
+
+/* Acá le damos color a los enlaces de bavegación */
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/*  */
+
+nav p {
+    color: #fff;
+}
+
+.navegacion {
+    width: 100%;
+    background: #000;
+    display: flow-root;
+    position: fixed;
+    z-index: 1000;
+}
+
+.navegacion ul {
+    float: right;
+    margin-right: 50px;
+    padding-left: 10px;
+    list-style: none;
+}
+
+.logo {
+    float: left;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu>li {
+    display: inline-block;
+}
+
+.menu>li>a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: rgb(221, 176, 176);
+    transition: all .3s;
+}
+
+.submenu {
+    position: absolute;
+    background: #333333;
+    width: 10%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+hr {
+    width: 400px;
+    margin-top: 80px;
+}
+
+#titulo h1 {
+    margin-top: 20px;
+    text-align: center;
+    align-content: center;
+    font-size: 20px;
+    bottom: 500px;
+    padding-top: 50px
+}
+
+.contenedor {
+    margin-top: 30px;
+}
+
+span {
+    color: red;
+}
+
+#sltTipoUsuario {
+    padding: 10px;
+}
+
+#placeFotografia {
+    margin-top: -22px;
+    width: 300px;
+}
+
+#sltTipoUsuario {
+    padding: 10px;
+    width: 265px;
+}
+
+#txtPrimerNombre {
+    padding: 10px;
+    width: 265px;
+}
+
+#txtPrimerApellido {
+    padding: 10px;
+    width: 265px;
+}
+
+#sltTipoIdentificacion {
+    padding: 10px;
+    width: 287px;
+}
+
+#txtIdentificacion {
+    padding: 10px;
+    width: 265px;
+}
+
+#txtTelefono {
+    padding: 10px;
+    width: 265px;
+}
+
+#txtCorreo {
+    padding: 10px;
+    width: 265px;
+}
+
+
+/* tercera columna */
+
+#txtSegundoNombre {
+    padding: 10px;
+    width: 265px;
+}
+
+#txtSegundoApellido {
+    padding: 10px;
+    width: 265px;
+}
+
+#sltTipoPersona {
+    padding: 10px;
+    width: 287px;
+}
+
+#txtProfesion {
+    padding: 10px;
+    width: 265px;
+}
+
+#rbtMasculino {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#txtPasswordUno {
+    padding: 10px;
+    width: 265px;
+}
+
+#txtConfirmarPassword {
+    padding: 10px;
+    width: 265px;
+}
+
+#btnRegistrar {
+    padding: 10px 30px 10px 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #707070;
+    color: #fff;
+}
+
+#btnRegistrar:hover {
+    cursor: pointer;
+}
+
+#btnGuardar {
+    padding: 10px 30px 10px 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #707070;
+    color: #fff;
+}
+
+#btnGuardar:hover {
+    cursor: pointer;
+}
+
+footer {
+    font-weight: bold;
+    height: 140px;
+    background-color: #000;
+}
+
+footer a {
+    margin-right: 20px;
+}
+
+#piePagina {
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+#face,
+#instagram,
+#twit {
+    font-size: 5px;
+    border: 2px solid #fff;
+    padding: 3px;
+    margin-top: 30px;
+    display: inline-block;
+    background-color: #fff;
+    color: black;
+    border-radius: 3px;
+    align-items: center;
+}
+
+#instagram {
+    margin-right: 100PX;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 60px 1fr;
+}
+
+.espacio1 {
+    grid-column: 3/5;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#piePagina {
+    grid-column: 3/5;
+    grid-row: 2;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#foto {
+    /* background-image: url('../img/placeholder.png'); */
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+}
+
+#img {
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    grid-column: 1 / 3;
+    grid-row: 1/5;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    top: 75px;
+    left: 200px;
+    position: relative;
+}
+
+
+/* Estilos del Grid */
+
+#foto {
+    margin-left: 50px;
+}
+
+#btnSubirFoto {
+    text-align: center;
+}
+
+
+/* segunda columna */
+
+.grid {
+    display: grid;
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#lineaIzquierda {
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+#titulo {
+    grid-row: 1;
+    grid-column: 2/4;
+    grid-row: 1/2;
+    row-gap: 100px;
+    align-content: center;
+    text-align: center;
+}
+
+#encargadoRutas {
+    display: grid;
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(18, 50px);
+    align-content: center;
+    text-align: justify;
+    column-gap: 20px;
+}
+
+#usuario {
+    grid-column: 2/4;
+    grid-row: 1;
+    align-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#inputUsuario {
+    grid-column: 2/4;
+    grid-row: 2;
+    align-content: center;
+    text-align: center;
+    box-sizing: content-box;
+}
+
+#primerNombre {
+    grid-column: 2;
+    grid-row: 3;
+    margin-top: 20px;
+}
+
+#inputNombre {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+#primerApellido {
+    grid-column: 2;
+    grid-row: 5;
+    margin-top: 20px;
+}
+
+#inputPrimerApellido {
+    grid-column: 2;
+    grid-row: 6;
+}
+
+#tipoIdentificacion {
+    grid-column: 2;
+    grid-row: 7;
+    margin-top: 20px;
+}
+
+#inputTipoIdentificacion {
+    grid-column: 2;
+    grid-row: 8;
+}
+
+#identificacion {
+    grid-column: 2;
+    grid-row: 9;
+    margin-top: 20px;
+}
+
+#inputIdentificacion {
+    grid-column: 2;
+    grid-row: 10;
+    margin-top: -9.5px;
+}
+
+#telefono {
+    grid-column: 2;
+    grid-row: 11;
+    margin-top: 20px;
+}
+
+#inputTelefono {
+    grid-column: 2;
+    grid-row: 12;
+}
+
+#correo {
+    grid-column: 2;
+    grid-row: 13;
+    margin-top: 20px;
+}
+
+#inputCorreo {
+    grid-column: 2;
+    grid-row: 14;
+}
+
+#fotografia {
+    grid-column: 2;
+    grid-row: 15;
+    padding-top: 40px;
+}
+
+#inputfotografia {
+    grid-column: 2;
+    grid-row: 16;
+    padding-top: 17px;
+}
+
+#boton {
+    grid-column: 2/4;
+    grid-row: 17;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* tercera columna */
+
+#segundoNombre {
+    grid-column: 3;
+    grid-row: 3;
+    margin-top: 20px;
+}
+
+#inputSegundoNombre {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+#segundoApellido {
+    grid-column: 3;
+    grid-row: 5;
+    margin-top: 20px;
+}
+
+#inputSegundoApellido {
+    grid-column: 3;
+    grid-row: 6;
+}
+
+#tipoPersona {
+    grid-column: 3;
+    grid-row: 7;
+    margin-top: 20px;
+}
+
+#inputTipoPersona {
+    grid-column: 3;
+    grid-row: 8;
+    margin-top: -10px;
+}
+
+#profesion {
+    grid-column: 3;
+    grid-row: 9;
+    margin-top: 20px;
+}
+
+#inputProfesion {
+    grid-column: 3;
+    grid-row: 10;
+    margin-top: 1px;
+}
+
+#genero {
+    grid-column: 3;
+    grid-row: 11 / 13;
+}
+
+#sexo {
+    grid-column: 3;
+    grid-row: 11;
+    margin-top: 20px;
+}
+
+#inputSexo {
+    grid-column: 3;
+    grid-row: 13;
+    margin-top: 15px;
+}
+
+#contraseña {
+    grid-column: 3;
+    grid-row: 13;
+    margin-top: 20px;
+}
+
+#inputContraseña {
+    grid-column: 3;
+    grid-row: 14;
+    margin-top: -10px;
+}
+
+#confirmarContraseña {
+    grid-column: 3;
+    grid-row: 15;
+    margin-top: 20px;
+}
+
+#avisos {
+    grid-column: 4;
+    grid-row: 14;
+}
+
+#confirmar {
+    grid-column: 4;
+    grid-row: 16;
+}
+
+#inputConfirmarContraseña {
+    grid-column: 3;
+    grid-row: 16;
+    box-sizing: border-box;
+    margin-top: -10px;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 60px 1fr;
+}
+
+.espacio1 {
+    grid-column: 3/5;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+#piePagina {
+    display: flex;
+    grid-column: 3/5;
+    grid-row: 2;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* Estlios Grid Perfil de Usuario */
+
+#perfilEncargadoRutas {
+    display: grid;
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(10, 50px);
+    align-content: center;
+    text-align: justify;
+    align-items: center;
+    column-gap: 20px;
+}
+
+#txtFoto {
+    grid-column: 1 / 3;
+    grid-row: 5;
+    text-align: center;
+}
+
+#txtPrimerNombre {
+    grid-column: 3;
+    grid-row: 1;
+    margin-top: -10px;
+}
+
+.primerNombre {
+    grid-column: 4;
+    grid-row: 1;
+    margin-top: -31px;
+}
+
+#txtSegundoNombre {
+    grid-column: 3;
+    grid-row: 2;
+    margin-top: -10px;
+}
+
+.segundoNombre {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+#txtPrimerApellido {
+    grid-column: 3;
+    grid-row: 3;
+    margin-top: -10px;
+}
+
+.primerApellido {
+    grid-column: 4;
+    grid-row: 3;
+    margin-top: -31px;
+}
+
+#txtSegundoApellido {
+    grid-column: 3;
+    grid-row: 4;
+    margin-top: -10px;
+}
+
+.segundoApellido {
+    grid-column: 4;
+    grid-row: 4;
+}
+
+#txtTipoIdentificacion {
+    grid-column: 3;
+    grid-row: 5;
+    margin-left: 10px;
+}
+
+#inputTipoIdentificacion {
+    margin-top: -10px;
+}
+
+.tipoIdentificacion {
+    grid-column: 4;
+    grid-row: 5;
+}
+
+#txtNumeroIdentificacion {
+    grid-column: 3;
+    grid-row: 6;
+    margin-left: 10px;
+}
+
+.numeroIdentificacion {
+    grid-column: 4;
+    grid-row: 6;
+    margin-top: -21px;
+}
+
+#txtGenero {
+    grid-column: 1;
+    grid-row: 6;
+    margin-left: 10px;
+}
+
+.genero {
+    grid-column: 2;
+    grid-row: 6;
+}
+
+#txtTelefono {
+    grid-column: 1;
+    grid-row: 7;
+    margin-top: -10px;
+}
+
+.telefono {
+    grid-column: 2;
+    grid-row: 7;
+    margin-top: -10px;
+}
+
+#txtCorreo {
+    grid-column: 3;
+    grid-row: 7;
+    margin-top: -10px;
+}
+
+.correo {
+    grid-column: 4;
+    grid-row: 7;
+    margin-top: -11px;
+}
+
+#txtProfesion {
+    grid-column: 1;
+    grid-row: 8;
+    margin-top: -10px;
+}
+
+.profesion {
+    grid-column: 2;
+    grid-row: 8;
+    margin-top: -21px;
+}
+
+#txtTipoUsuario {
+    grid-column: 3;
+    grid-row: 8;
+    margin-left: 10px;
+}
+
+.tipoUsuario {
+    grid-column: 4;
+    grid-row: 8;
+}
+
+#txtTipoPersona {
+    grid-column: 1;
+    grid-row: 9;
+    margin-left: 10px;
+}
+
+.tipoPersona {
+    grid-column: 2;
+    grid-row: 9;
+}
+
+#txtContrasenna {
+    grid-column: 3;
+    grid-row: 9;
+    margin-left: 10px;
+}
+
+.contrasenna {
+    grid-column: 4;
+    grid-row: 9;
+    font-size: 20px;
+}
+
+#encargadoRutas p {
+    justify-content: center;
+    margin-right: auto;
+    vertical-align: bottom;
+    align-items: center;
+}
+
+
+/* Estilos Grid de listar usuarios */
+
+#tblUsuarios {
+    margin: 100px auto;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 20px;
+}
+
+#tbUsuarios td {
+    border-bottom: solid 5px #000;
+}
+
+tr:nth-child(even) {
+    background-color: #ddd
+}
+
+tr:hover td {
+    background-color: rgba(145, 143, 143, 0.568);
+}
+
+#thPrimerNombre {
+    position: relative;
+    text-align: justify;
+    width: 16%;
+}
+
+.primerNombreTabla {
+    position: relative;
+}
+
+#thPrimerApellido {
+    position: relative;
+    text-align: justify;
+    width: 16%;
+}
+
+.primerApellidoTabla {
+    position: relative;
+}
+
+#thIdentificacion {
+    position: relative;
+    text-align: justify;
+    width: 16%;
+}
+
+.identificacionTabla {
+    position: relative;
+}
+
+#thUsuario {
+    position: relative;
+    text-align: justify;
+    width: 16%;
+}
+
+.usuarioTabla {
+    position: relative;
+    text-align: justify;
+}
+
+#thCorreo {
+    position: relative;
+    text-align: justify;
+    width: 20%;
+}
+
+.correoTabla {
+    position: relative;
+    text-align: justify;
+}
+
+#thead {
+    position: relative;
+    bottom: 25px;
+    border-bottom: #000 4px solid;
+}
+
+#tablaListar {
+    display: grid;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.btnPerfil {
+    padding: 10px 30px 10px 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #707070;
+    color: #fff;
+    position: relative;
+    text-decoration-color: #fff;
+    width: 120px;
+}
+
+.btnModificar {
+    padding: 10px 30px 10px 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #707070;
+    color: #fff;
+    position: relative;
+    text-decoration-color: #fff;
+    align-self: center;
+    justify-self: center;
+    width: 120px;
+}
+
+.btnEstadoActivado {
+    padding: 10px 30px 10px 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: red;
+    color: #fff;
+    /* left: -190px; */
+    position: relative;
+    text-decoration-color: #fff;
+    align-self: center;
+    justify-self: center;
+}
+
+.btnEstadoDesactivado {
+    padding: 10px 20px 10px 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #707070;
+    color: #fff;
+    /* left: -190px; */
+    position: relative;
+    text-decoration-color: #fff;
+    align-self: center;
+    justify-self: center;
+}

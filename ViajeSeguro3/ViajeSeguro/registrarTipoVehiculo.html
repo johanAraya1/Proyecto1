@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/generalTipoVehiculo.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>Resgistro tipo de vehiculo</title>
+    <title>Tipo de vehículo</title>
+</head>
+
+<body>
+    <header class="fondo1">
+        <nav class="navegacion">
+            <div class="logo">
+                <a href="listarSiniestrosADM.html"><b>VIAJE SEGURO™</b></a>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Registrar usuarios</a>
+                    <ul class="submenu">
+                        <li><a href="registro_usuario_especializado.html">Registrar usuarios especializados</a></li>
+                        <li><a href="RegistrarUER.html">Registrar usuarios encargados de ruta</a></li>
+                        <li><a href="registrarUsuarioNormalADM.html">Registrar usuarios normales</a></li>
+                        <li><a href="listar_usuarios.html">Lista de usuarios</a></li>
+                    </ul>
+                </li>
+                <li><a href="listarCategoria.html">Categorías</a></li>
+                <li><a href="registrarRutasADM.html">Registrar ruta</a></li>
+                <li><a href="RegistrarSiniestroADM.html">Registrar siniestro</a></li>
+                <li><a href="registrarSolicitud AsistenciaADM.html">Solicitar asistencia</a></li>
+
+                <li><a href="listarVehiculosADM.html">Registrar vehiculo</a>
+                    <ul class="submenu">
+                        <li><a href="listarTipoVehiculos.html">Tipos de vehículos</a></li>
+                        <li><a href="caracteristicas.html">Caracteristicas</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Opciones</a>
+                    <ul class="submenu">
+                        <li><a href="listarTarjetasCreditoADM.html">Registrar método de pago</a></li>
+                        <li><a href="#" onclick="redirectLogout();">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="grid">
+            <div id="lineaIzquierda">
+                <hr>
+            </div>
+            <div id="titulo">
+                <h1>Registrar tipo de vehículo</h1>
+            </div>
+            <div id="lineaDerecha">
+                <hr>
+            </div>
+        </div>
+        <form id="tipoDevehiculo"></form>
+        <section id="sctPrincipal">
+
+            <div id="tipoVehiculo">
+                <label for="txtTipoVehiculo"><span>*</span>Tipo de vehículo</label>
+            </div>
+            <div id="inputTipoVehiculo">
+                <input type="text" id="txtTipoVehiculo" required>
+            </div>
+            <div id="descripcion">
+                <label for="txtdescripcion">Descripción o características adicionales</label>
+            </div>
+            <div id="inputDescripcion">
+                <input type="textarea" id="txtdescripcion" rows="100%" cols="50%">
+            </div>
+
+            <div id="boton">
+                <button type="button" id="btnRegistrar">REGISTRAR</button>
+            </div>
+        </section>
+        </form>
+    </main>
+    <footer>
+        <div id="footer">
+            <div class="espacio1">
+                <a id="face" href="http://www.facebook.com" target="blank">
+                    <i class="fab fa-facebook fa-3x"></i>
+                </a>
+                <a id="twit" href="https://twitter.com/?lang=es" target="blank">
+                    <i class="fab fa-twitter fa-3x"></i>
+                </a>
+                <a id="instagram" href="https://www.instagram.com/?hl=es-la" target="blank">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </a>
+            </div>
+            <div id="piePagina">
+                <p>Derechos Reservados © 2020</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="public/js/servicioVehiculos.js"></script>
+    <script src="public/js/registroControladorTipoVehiculo.js"></script>
+</body>
+
+</html>

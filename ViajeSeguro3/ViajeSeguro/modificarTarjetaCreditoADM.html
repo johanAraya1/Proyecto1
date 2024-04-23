@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modificar tarjeta de crédito</title>
+    <link rel="stylesheet" href="../Public/css/reset.css">
+    <link rel="stylesheet" href="../Public/css/registrarTarjetaCredito.css">
+</head>
+
+<body>
+    <main>
+        <header class="fondo1">
+            <nav class="navegacion">
+                <div class="logo">
+                    <a href="listarSiniestrosADM.html"><b>VIAJE SEGURO™</b></a>
+                </div>
+                <ul class="menu">
+                    <li><a href="#">Registrar usuarios</a>
+                        <ul class="submenu">
+                            <li><a href="registro_usuario_especializado.html">Registrar usuarios especializados</a></li>
+                            <li><a href="RegistrarUER.html">Registrar usuarios encargados de ruta</a></li>
+                            <li><a href="registrarUsuarioNormalADM.html">Registrar usuarios normales</a></li>
+                            <li><a href="listar_usuarios.html">Lista de usuarios</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="listarCategoria.html">Categorías</a></li>
+                    <li><a href="registrarRutasADM.html">Registrar ruta</a></li>
+                    <li><a href="RegistrarSiniestroADM.html">Registrar siniestro</a></li>
+                    <li><a href="registrarSolicitud AsistenciaADM.html">Solicitar asistencia</a></li>
+
+                    <li><a href="listarVehiculosADM.html">Registrar vehiculo</a>
+                        <ul class="submenu">
+                            <li><a href="listarTipoVehiculos.html">Tipos de vehículos</a></li>
+                            <li><a href="caracteristicas.html">Caracteristicas</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Opciones</a>
+                        <ul class="submenu">
+                            <li><a href="listarTarjetasCreditoADM.html">Registrar método de pago</a></li>
+                            <li><a href="#" onclick="redirectLogout();">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="registroMetodoPago">
+            <hr class="sinBorderIzquierdo">
+            <h1 class="titulo">Modificar Tarjeta de crédito</h1>
+            <hr class="sinBorderDerecho">
+        </section>
+        <form class="gridTarjetaCredito" id="formularioTarjeta">
+            <div class="formularioTarjetaCredito">
+                <fieldset class=formaDePago>
+                    <legend>Seleccione su método de pago</legend>
+                    <select class="tipoTarjeta" id="metodoPago" tabIndex="1" required>
+                    <option value="">--Seleccione un método de pago--</option>
+                    <option value="Tarjeta Bancaria" selected>Tarjeta de crédito o débito</option>
+                </select>
+                </fieldset>
+                <fieldset class="cardNumber">
+                    <legend>Número de tarjeta</legend>
+                    <div>
+                        <input type="text" id="numeroTarjeta" tabIndex="2" placeholder="0000 0000 0000 0000" maxlength="16" required>
+                        <span id="entidadFinanciera"></span>
+                        <span id="entidadFinanciera2"></span>
+                        <span id="entidadFinanciera3"></span>
+                        <span id="formatoCorrecto"></span>
+                        <span id="tarjetaValida"></span>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="vencimiento">Fecha de vencimiento</legend>
+                    <div class="fechaVencimiento" id="containerFechaVencimiento">
+                        <div class="mes">
+                            <input type="tel" id="mesExpiracion" tabindex="3" placeholder="MM" maxlength="2" required>
+                            <span id="estadoExpiracion"></span>
+                        </div>
+                        <span class="divisor">/</span>
+                        <div>
+                            <input type="tel" id="annoExpiracion" tabIndex="4" placeholder="YY" maxlength="2" required>
+                            <span id="estadoExpiracion2"></span>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="codSeguridad">
+                    <legend class="leyendaSeguridad">Código de seguridad</legend>
+                    <div class="inputCodigo">
+                        <input type="tel" id="securityCode" tabIndex="5" maxlength="4" required>
+                        <span id="estadoCodigoSeguridad"></span>
+                    </div>
+                </fieldset>
+                <fieldset class="nameOnCard">
+                    <legend>Nombre en tarjeta</legend>
+                    <div>
+                        <input type="text" tabIndex="6" id="cardHolder" style="text-transform: uppercase;" placeholder="Tarjetahabiente" required>
+                    </div>
+                </fieldset>
+            </div>
+        </form>
+        </div>
+        <div class="botonRegistrar">
+            <button type="button" id="registrarTarjeta" class="botonAgregar" tabIndex="7">Actualizar</button>
+        </div>
+    </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="../Public/js/registroTarjetaCreditoServicio.js"></script>
+    <script src="../Public/js/modificarTarjetaCreditoControlador.js"></script>
+</body>
+
+</html>

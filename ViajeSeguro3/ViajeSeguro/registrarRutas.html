@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro de Rutas</title>
+
+    <link rel="stylesheet" href="public/css/reset.css">
+    <link rel="stylesheet" href="public/css/generalRutas.css">
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+
+
+</head>
+
+<body>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.0/mapbox-gl-draw.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.0/mapbox-gl-draw.css" type="text/css" />
+
+    <header class="fondo1">
+        <nav class="navegacion">
+            <div class="logo">
+                <a href="listarRutas.html"><b>VIAJE SEGURO™</b></a>
+            </div>
+            <ul class="menu">
+
+                <li><a href="registrarRutas.html">Registrar rutas</a>
+
+                </li>
+
+                <li><a href="#">Opciones</a>
+                    <ul class="submenu">
+                        <li><a href="perfil_usuariosUER.html">Ver Perfil</a></li>
+
+                        <li><a href="#" onclick="redirectLogout();">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+
+        <div class="grid">
+
+            <div id="lineaIzquierda">
+                <hr>
+            </div>
+
+            <div id="titulo">
+                <h1>Registro de Rutas</h1>
+            </div>
+
+            <div id="lineaDerecha">
+                <hr>
+            </div>
+
+            <div id="map"> </div>
+            <div class='info-box'>
+                <p>Draw your route using the draw tools (25 points max)</p>
+                <div id='calculated-line'></div>
+            </div>
+
+            <div id="coordinates" class="coordinates">
+
+            </div>
+
+            <div id="lblNombre">
+                <label for="txtNombre"><span>*</span>Nombre:</label>
+            </div>
+            <div id="nombreTxtGrid">
+                <input type="text" id=txtNombre>
+            </div>
+
+            <div id="boton">
+                <button type="button" id="btnGuardar">REGISTRAR</button>
+            </div>
+
+
+
+            <div id=descripcion>
+                <label for="txtDescripcion"><span>*</span>Descripción:</label>
+            </div>
+
+            <div class="txtDescripcion">
+                <textarea id="txtDescripcion" cols="30" rows="10" required></textarea>
+            </div>
+
+        </div>
+
+
+        <footer>
+            <div id="footer">
+                <div class="espacio1">
+                    <a id="face" href="http://www.facebook.com" target="blank">
+                        <i class="fab fa-facebook fa-3x"></i>
+                    </a>
+                    <a id="twit" href="https://twitter.com/?lang=es" target="blank">
+                        <i class="fab fa-twitter fa-3x"></i>
+                    </a>
+                    <a id="instagram" href="https://www.instagram.com/?hl=es-la" target="blank">
+                        <i class="fab fa-instagram fa-3x"></i>
+                    </a>
+                </div>
+                <div id="piePagina">
+                    <p>Derechos Reservados © 2020</p>
+                </div>
+            </div>
+        </footer>
+        <script src="https://unpkg.com/axios/dist/axios.min.js "></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script src="./Public/js/mapaRutaDir.js"></script>
+        <script src="./Public/js/registroServicioRuta.js"></script>
+        <script src="./Public/js/registroControladorRuta.js"></script>
+
+    </main>
+
+</body>

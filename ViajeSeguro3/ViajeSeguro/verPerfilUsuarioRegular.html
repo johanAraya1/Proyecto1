@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="../Public/css/reset.css">
+    <link rel="stylesheet" href="../Public/css/verPerfilUsuarioRegular.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="fondo1">
+        <nav class="navegacion">
+            <div class="logo">
+                <a href="listarSiniestros.html"><b>VIAJE SEGURO™</b></a>
+            </div>
+            <ul class="menu">
+                <li><a href="RegistrarSiniestro.html">Registrar siniestro</a></li>
+                <li><a href="registrarSolicitud Asistencia.html">Solicitar asistencia</a></li>
+                <li><a href="listarVehiculos.html">Registrar vehiculo</a></li>
+                <li><a href="#">Opciones</a>
+                    <ul class="submenu">
+                        <li><a href="verPerfilUsuarioRegular.html">Ver Perfil</a></li>
+                        <li><a href="listarTarjetasCredito.html">Registrar método de pago</a></li>
+                        <li><a href="#" onclick="redirectLogout();">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class=titulo>
+        <hr class="sinBorderIzquierdo">
+        <h4>Mi Perfil</h4>
+        <hr class="sinBorderDerecho">
+    </div>
+    <section id="perfilDeUsuario">
+        <div id="resumenPerfil">
+            <button type="button" id="botonEditarPerfil">Editar Perfil</button>
+            <img id="fotoUsuario">
+            <div class="gridNombreUsuario">
+                <h2 id=nombreDeUsuario></h2>
+            </div>
+            <div class="gridTipoUsuario">
+                <h3 id="tipoUsuario"></h3>
+            </div>
+            <button type="button" id="verTarjetasCredito">Métodos de pago</button>
+        </div>
+        <div id="informacionPerfil">
+            <div class="tituloInformacion">
+                <p>Información</p>
+            </div>
+            <div class="gridID">
+                <label for="identificacion">Identificación:</label>
+                <p id="identificacion"></p>
+            </div>
+            <div class="gridGenero">
+                <label for="genero">Género:</label>
+                <p id="genero"></p>
+            </div>
+            <div class="gridTelefono">
+                <label for="telefono">Teléfono:</label>
+                <p id="telefono"></p>
+            </div>
+            <div class="gridCorreo">
+                <label for="correo">Correo electrónico:</label>
+                <p id="correo"></p>
+            </div>
+            <div class="gridTipoPersona">
+                <label for="tipoPersona">Tipo de persona:</label>
+                <p id="tipoPersona"></p>
+            </div>
+            <div class="gridEstadoUsuario">
+                <label for="estadoUsuario">Estado:</label>
+                <p id="estadoUsuario"></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div id="footer">
+            <div class="espacio1">
+                <a id="face" href="http://www.facebook.com" target="blank">
+                    <i class="fab fa-facebook fa-3x"></i>
+                </a>
+                <a id="twit" href="https://twitter.com/?lang=es" target="blank">
+                    <i class="fab fa-twitter fa-3x"></i>
+                </a>
+                <a id="instagram" href="https://www.instagram.com/?hl=es-la" target="blank">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </a>
+            </div>
+            <div id="piePagina">
+                <p>Derechos Reservados © 2020</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="../Public/js/registroUsuarioNormalServicio.js"></script>
+<script src="../Public/js/perfilUsuarioRegularControlador.js"></script>
+
+</html>

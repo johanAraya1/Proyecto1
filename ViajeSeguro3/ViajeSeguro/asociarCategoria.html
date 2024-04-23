@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociar categoría</title>
+    <link rel="stylesheet" href="Public/css/reset.css">
+    <link rel="stylesheet" href="Public/css/generalAsociarCategoria.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="fondo1">
+        <nav class="navegacion">
+            <div class="logo">
+                <a href="#">VIAJE SEGURO™</a>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Registrar siniestro</a></li>
+                <li><a href="#">Solicitar asistencia</a></li>
+                <li><a href="#">Registrar vehiculo</a></li>
+                <li><a href="#">Opciones</a>
+                    <ul class="submenu">
+                        <li><a href="#">Registrar método de pago</a></li>
+                        <li><a href="#">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <main>
+        <div class="grid">
+            <div id="lineaIzquierda">
+                <hr>
+            </div>
+            <div id="titulo">
+                <h1>Asociar categoría a usuario especializado </h1>
+            </div>
+            <div id="lineaDerecha">
+                <hr>
+            </div>
+        </div>
+        <br>
+        <table id="tblAsociarCategoria">
+            <thead>
+                <tr>
+                    <th>Categorías</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyGrid">
+
+
+            </tbody>
+
+
+        </table>
+        <div id="divBoton">
+            <!-- <a id="btnRegistrar" href="registro_usuario_especializado.html">Registrar</a> -->
+            <button type="button" id="btnRegistrar" onclick="redirectCat()">Registrar</button>
+        </div>
+    </main>
+    <br>
+    <footer>
+        <div id="footer">
+            <div class="espacio1">
+                <a id="face" href="http://www.facebook.com" target="blank">
+                    <i class="fab fa-facebook fa-3x"></i>
+                </a>
+                <a id="twit" href="https://twitter.com/?lang=es" target="blank">
+                    <i class="fab fa-twitter fa-3x"></i>
+                </a>
+                <a id="instagram" href="https://www.instagram.com/?hl=es-la" target="blank">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </a>
+            </div>
+            <div id="piePagina">
+                <p>Derechos Reservados © 2020</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./Public/js/registroServicioCat.js"></script>
+    <script src="./Public/js/asociarCategoriaControlador.js"></script>
+    <script src="/public/js/registro_controlador.js"></script>
+</body>
+
+</html>

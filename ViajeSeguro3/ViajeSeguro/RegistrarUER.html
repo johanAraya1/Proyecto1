@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Public/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Public/css/generalUER.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>Resgistro usuario encargado de rutas</title>
+</head>
+
+<body>
+    <header class="fondo1">
+        <nav class="navegacion">
+            <div class="logo">
+                <a href="listarSiniestrosADM.html"><b>VIAJE SEGURO™</b></a>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Registrar usuarios</a>
+                    <ul class="submenu">
+                        <li><a href="registro_usuario_especializado.html">Registrar usuarios especializados</a></li>
+                        <li><a href="RegistrarUER.html">Registrar usuarios encargados de ruta</a></li>
+                        <li><a href="registrarUsuarioNormalADM.html">Registrar usuarios normales</a></li>
+                        <li><a href="listar_usuarios.html">Lista de usuarios</a></li>
+                    </ul>
+                </li>
+                <li><a href="listarCategoria.html">Categorías</a></li>
+                <li><a href="registrarRutasADM.html">Registrar ruta</a></li>
+                <li><a href="RegistrarSiniestroADM.html">Registrar siniestro</a></li>
+
+                <li><a href="registrarSolicitud AsistenciaADM.html">Solicitar asistencia</a>
+                    <ul class="submenu">
+                        <li><a href="listarAsistenciasADM.html">Listar Asistencias</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="listarVehiculosADM.html">Registrar vehículo</a>
+                    <ul class="submenu">
+                        <li><a href="listarTipoVehiculos.html">Tipos de vehículos</a></li>
+                        <li><a href="caracteristicas.html">Características</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Opciones</a>
+                    <ul class="submenu">
+                        <li><a href="listarTarjetasCreditoADM.html">Registrar método de pago</a></li>
+                        <li><a href="#" onclick="redirectLogout();">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="grid">
+            <div id="lineaIzquierda">
+                <hr>
+            </div>
+            <div id="titulo">
+                <h1>Registro usuario encargado de rutas </h1>
+            </div>
+            <div id="lineaDerecha">
+                <hr>
+            </div>
+        </div>
+        <div class="contenedor">
+            <form id="encargadoRutas">
+                <div id="usuario">
+                    <label for="sltTipoUsuario"><span>*</span> Tipo de usuario</label>
+                </div>
+                <div id="inputUsuario">
+                    <select id="sltTipoUsuario" required>
+                    <option value="Usuario encargado de rutas">Usuario encargado de rutas</option>
+                    </select>
+                </div>
+
+                <!-- Segunda Columna -->
+                <div id="primerNombre">
+                    <label for="txtPrimerNombre"><span>*</span>Primer nombre</label>
+                </div>
+                <div id="inputNombre">
+                    <input type="text" id="txtPrimerNombre" required>
+                </div>
+
+                <div id="primerApellido">
+                    <label for="txtPrimerApellido"><span>*</span>Primer apellido</label>
+                </div>
+                <div id="inputPrimerApellido">
+                    <input type="text" id="txtPrimerApellido" required>
+                </div>
+
+                <div id="tipoIdentificacion">
+                    <label for="sltTipoIdentificacion"><span>*</span>Tipo de identificación</label>
+                </div>
+                <div id="inputTipoIdentificacion">
+                    <select id="sltTipoIdentificacion" required>
+                    <option value="">--Seleccione una opción--</option>
+                    <option value="Nacional">Cédula nacional</option>
+                    <option value="DIMEX">DIMEX</option>
+                    <option value="Jurídica">Cédula jurídica</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                    </select>
+                </div>
+                <div id="identificacion">
+                    <label for="txtIdentificacion"><span>*</span>Identificación</label>
+                </div>
+                <div id="inputIdentificacion">
+                    <input type="text" id="txtIdentificacion" required>
+                </div>
+                <div id="telefono">
+                    <label for="txtTelefono"><span>*</span>Número de teléfono</label></div>
+                <div id="inputTelefono">
+                    <input type="tel" id="txtTelefono" required>
+                </div>
+                <div id="correo">
+                    <label for="txtCorreo"><span>*</span>Correo electrónico</label></div>
+                <div id="inputCorreo">
+                    <input type="email" id="txtCorreo" required>
+                </div>
+                <div>
+                    <img id="foto" src="https://res.cloudinary.com/buhosapiens/image/upload/v1586048609/male-icon.png">
+
+                    <div id="btnSubirFoto">
+                        <button type="button" id="btnFoto">Subir foto</button>
+                    </div>
+
+
+                </div>
+
+                <div id="boton">
+                    <button type="button" id="btnRegistrar">REGISTRAR</button>
+                </div>
+
+
+                <!-- Tercera columna -->
+
+                <div id="segundoNombre">
+                    <label for="txtSegundoNombre">Segundo nombre</label>
+                </div>
+                <div id="inputSegundoNombre">
+                    <input type="text" id="txtSegundoNombre">
+                </div>
+                <div id="segundoApellido">
+                    <label for="txtSegundoApellido">Segundo apellido</label>
+                </div>
+                <div id="inputSegundoApellido">
+                    <input type="text" id="txtSegundoApellido">
+                </div>
+                <div id="tipoPersona">
+                    <label for="sltTipoPersona"> <span>*</span>Tipo de persona</label>
+                </div>
+                <div id="inputTipoPersona">
+                    <select id="sltTipoPersona" required>
+                     <option value="">--Seleccione una opción--</option>
+                     <option value="Física">Persona física</option>
+                     <option value="Jurídica">Persona jurídica</option>
+                     </select>
+                </div>
+                <div id="profesion">
+                    <label for="txtProfesion"><span>*</span>Profesión u oficio</label>
+                </div>
+                <div id="inputProfesion">
+                    <input type="text" id="txtProfesion" required>
+                </div>
+                <fieldset id="genero">
+                    <div id="sexo">
+                        <legend><span>*</span>Sexo</legend>
+                    </div>
+                    <div id="inputSexo">
+                        <input type="radio" name="rbtSexo" id="rbtMasculino" value="Masculino">
+                        <label for="rbt-masculino">Masculino</label>
+                        <input type="radio" name="rbtSexo" id="rbtFemenino" value="Femenino">
+                        <label for="rbt-femenino">Femenino</label>
+                        <input type="radio" name="rbtSexo" id="rbtOtro" value="Otro">
+                        <label for="rbt-otro">Otro</label>
+                    </div>
+                </fieldset>
+                <div id="contraseña">
+                    <label for="txtPasswordUno"><span>*</span>Contraseña</label>
+                </div>
+
+                <div id="inputContraseña">
+                    <input type="password" id="txtPasswordUno" oninput="encontro();" required>
+
+                </div>
+                <div id="avisos">
+                    <span id="aviso"></span>
+                    <br>
+                    <span id="aviso2"></span>
+                    <br>
+                    <span id="aviso3"></span>
+                </div>
+                <div id="confirmarContraseña">
+                    <label for="txtConfirmarPassword"><span>*</span>Confirmar contraseña</label>
+                </div>
+                <div id="inputConfirmarContraseña">
+                    <input type="password" id="txtConfirmarPassword" oninput="encontro();" required>
+                </div>
+                <div id="confirmar">
+                    <span id="aviso4"> </span>
+                </div>
+            </form>
+        </div>
+
+
+    </main>
+    <footer>
+        <div id="footer">
+            <div class="espacio1">
+                <a id="face" href="http://www.facebook.com" target="blank">
+                    <i class="fab fa-facebook fa-3x"></i>
+                </a>
+                <a id="twit" href="https://twitter.com/?lang=es" target="blank">
+                    <i class="fab fa-twitter fa-3x"></i>
+                </a>
+                <a id="instagram" href="https://www.instagram.com/?hl=es-la" target="blank">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </a>
+            </div>
+            <div id="piePagina">
+                <p>Derechos Reservados © 2020</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="../Public/js/servicioUsuariosUER.js"></script>
+    <script src="../Public/js/servicioImagenUER.js"></script>
+    <script src="../Public/js/registroControladorUER.js"></script>
+
+
+
+
+</body>
+
+</html>

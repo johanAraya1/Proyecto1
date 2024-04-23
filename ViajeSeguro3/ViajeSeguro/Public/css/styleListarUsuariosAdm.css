@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.btnEstadoActivado {
+    padding: 10px 30px 10px 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: red;
+    color: #fff;
+    /* left: -190px; */
+    position: relative;
+    text-decoration-color: #fff;
+    align-self: center;
+    justify-self: center;
+}
+
+.btnEstadoDesactivado {
+    padding: 10px 20px 10px 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #707070;
+    color: #fff;
+    /* left: -190px; */
+    position: relative;
+    text-decoration-color: #fff;
+    align-self: center;
+    justify-self: center;
+}
+
+.navegacion {
+    width: 100%;
+    background: #000;
+    display: flow-root;
+    position: fixed;
+    z-index: 1000;
+    margin-top: -80px;
+}
+
+.navegacion ul {
+    float: right;
+    margin-right: 50px;
+    padding-left: 10px;
+    list-style: none;
+}
+
+.logo {
+    float: left;
+    margin-top: 15px;
+    margin-left: 50px;
+    /* padding-bottom: 10px; */
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu>li {
+    display: inline-block;
+}
+
+.menu>li>a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: rgb(221, 176, 176);
+    transition: all .3s;
+}
+
+.submenu {
+    position: absolute;
+    background: #333333;
+    width: 10%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+#buscarUsuario {
+    margin-top: 80px;
+    display: grid;
+}
+
+#buscarUsuario input {
+    width: 400px;
+    height: 35px;
+    border-radius: 20px;
+    justify-self: center;
+}
+
+#buscarUsuario input::placeholder {
+    text-align: center;
+    font-size: 16px;
+    border: gray;
+}
+
+#tablaUsuarios {
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9;
+    min-width: 400px;
+}
+
+#tablaUsuarios thead tr {
+    background-color: #009879;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+#tablaUsuarios thead,
+#tablaUsuarios td {
+    padding: 12px 15px;
+}
+
+#tablaUsuarios tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#tablaUsuarios tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+footer {
+    font-weight: bold;
+    height: 140px;
+    background-color: #000;
+}
+
+footer a {
+    margin-right: 20px;
+}
+
+#piePagina {
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+#face,
+#instagram,
+.btnEliminar {
+    padding: 10px 30px 10px 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: red;
+    color: #fff;
+    /* left: -190px; */
+    position: relative;
+    text-decoration-color: #fff;
+    align-self: center;
+    justify-self: center;
+}
+
+#twit {
+    font-size: 5px;
+    border: 2px solid #fff;
+    padding: 3px;
+    margin-top: 30px;
+    display: inline-block;
+    background-color: #fff;
+    color: black;
+    border-radius: 3px;
+    align-items: center;
+}
+
+#instagram {
+    margin-right: 100PX;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 60px 1fr;
+}
+
+.espacio1 {
+    margin-left: 43px;
+    grid-column: 3/5;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#piePagina {
+    grid-column: 3/5;
+    grid-row: 2;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}

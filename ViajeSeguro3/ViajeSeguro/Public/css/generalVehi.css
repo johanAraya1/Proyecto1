@@ -1,0 +1,372 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    height: auto;
+}
+
+#foto {
+    background-image: url("../img/placeHolderCar.jpg");
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+}
+
+.grid {
+    display: grid;
+    width: 90%;
+    height: 90%;
+    margin-left: 10%;
+    grid-template-columns: 30% 30% 30%;
+}
+
+#labelAno {
+    grid-column: 3;
+    grid-row: 5;
+    margin-top: 20px;
+}
+
+#inputAno {
+    grid-column: 3;
+    grid-row: 6;
+}
+
+#numAno {
+    box-sizing: content-box;
+    padding: 10px;
+    width: 290px;
+}
+
+#txtModelo {
+    box-sizing: content-box;
+    padding: 10px;
+    width: 290px;
+}
+
+#txtPlaca {
+    box-sizing: content-box;
+    padding: 10px;
+    width: 290px;
+}
+
+#txtMarca {
+    box-sizing: content-box;
+    padding: 10px;
+    width: 290px;
+}
+
+#sltEstilo {
+    box-sizing: content-box;
+    padding: 10px;
+    width: 290px;
+}
+
+#txtColor {
+    box-sizing: content-box;
+    padding: 10px;
+    width: 290px;
+}
+
+#inputPlaca {
+    grid-row: 4;
+    grid-column: 2;
+}
+
+#labelPlaca {
+    grid-row: 3;
+    grid-column: 2;
+    margin-top: 20px;
+}
+
+#labelMarca {
+    grid-row: 3;
+    grid-column: 3;
+    margin-top: 20px;
+}
+
+#inputMarca {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+#labelModelo {
+    grid-column: 2;
+    grid-row: 5;
+    margin-top: 20px;
+}
+
+#inputModelo {
+    grid-column: 2;
+    grid-row: 6;
+}
+
+#labelColor {
+    grid-column: 2;
+    grid-row: 7;
+    margin-top: 20px;
+}
+
+#inputColor {
+    grid-column: 2;
+    grid-row: 8;
+}
+
+#labelEstilo {
+    grid-column: 3;
+    grid-row: 7;
+    margin-top: 20px;
+}
+
+#inputEstilo {
+    grid-column: 3;
+    grid-row: 8;
+}
+
+#tablaCaract {
+    margin-top: 50px;
+    font-size: 15px;
+    position: relative;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row: 9;
+    align-content: center;
+    text-align: left;
+    box-sizing: content-box;
+    width: 500px;
+}
+
+th {
+    font-weight: bold;
+}
+
+tr {
+    margin-top: 15px;
+}
+
+.contenedor {
+    margin-top: 15px;
+}
+
+#tablaVehiculos {
+    margin-top: 100px;
+    font-size: 15px;
+    margin-left: 25%;
+    align-content: center;
+    text-align: left;
+}
+
+span {
+    color: red;
+}
+
+.inputError {
+    border: 2px solid #ee5253;
+}
+
+#btnGuardar {
+    color: #ffffff;
+    margin-left: 40%;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 13px;
+    padding-bottom: 20px;
+    width: 215px;
+    background-color: #777;
+    border-radius: 5%;
+    height: 50px;
+    font-size: 20px;
+}
+
+#btnGuardar button:hover {
+    color: rgb(221, 176, 176);
+    transition: all .3s;
+}
+
+#inputPropietario {
+    margin-top: 10px;
+    grid-row: 2;
+    grid-column: 2/4;
+    align-content: center;
+    text-align: center;
+}
+
+#sltPropietario {
+    box-sizing: content-box;
+    padding: 10px;
+    width: 290px;
+}
+
+#inputTipoVehiculo {
+    grid-column: 2/4;
+    grid-row: 1;
+    align-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#sltTipoVehiculo {
+    box-sizing: content-box;
+    padding: 10px;
+    width: 290px;
+}
+
+.gridForm {
+    display: grid;
+    width: 90%;
+    height: 90%;
+    margin-top: 25px;
+    margin-left: 5%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(14, 50px);
+    align-content: left;
+    /* text-align: justify; */
+    column-gap: 15px;
+}
+
+hr {
+    width: 400px;
+    margin-top: 80px;
+}
+
+#titulo h1 {
+    margin-top: 20px;
+    text-align: center;
+    align-content: center;
+    font-size: 20px;
+    bottom: 500px;
+    padding-top: 50px;
+    color: #707070;
+}
+
+#lineaIzquierda {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#lineaDerecha {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.navegacion {
+    width: 100%;
+    background: #000;
+    display: flow-root;
+    position: fixed;
+    z-index: 1000;
+}
+
+.navegacion ul {
+    float: right;
+    margin-right: 50px;
+    padding-left: 10px;
+    list-style: none;
+}
+
+.logo {
+    float: left;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu>li {
+    display: inline-block;
+}
+
+.menu>li>a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: rgb(221, 176, 176);
+    transition: all .3s;
+}
+
+.submenu {
+    position: absolute;
+    background: #333333;
+    width: 10%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+footer {
+    font-weight: bold;
+    height: 140px;
+    background-color: #000;
+    margin-top: 100px;
+}
+
+footer a {
+    margin-right: 20px;
+}
+
+#piePagina {
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+#face,
+#instagram,
+#twit {
+    font-size: 5px;
+    border: 2px solid #fff;
+    padding: 3px;
+    margin-top: 30px;
+    display: inline-block;
+    background-color: #fff;
+    color: black;
+    border-radius: 3px;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 60px 1fr;
+}
+
+.espacio1 {
+    grid-column: 3/5;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#piePagina {
+    display: flex;
+    grid-column: 3/5;
+    grid-row: 2;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}

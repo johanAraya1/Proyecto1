@@ -1,0 +1,334 @@
+.errorDeInput {
+    border: 2px solid #ee5253;
+}
+
+
+/* Aquí termina el código de soporte para Javascript */
+
+
+/*Aqui comienza el código para el header*/
+
+.navegacion {
+    width: 100%;
+    margin: 0 auto;
+    background: #000;
+    display: flow-root;
+    position: fixed;
+    z-index: 1000;
+}
+
+.navegacion ul {
+    float: right;
+    margin-right: 50px;
+    padding-left: 10px;
+    list-style: none;
+}
+
+.logo {
+    float: left;
+    margin-top: 16px;
+    margin-left: 50px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu>li {
+    display: inline-block;
+}
+
+.menu>li>a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: rgb(221, 176, 176);
+    transition: all .3s;
+}
+
+.submenu {
+    position: absolute;
+    background: #333333;
+    width: 10%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Aqui terminan los estilos para el header y comienzan los del body */
+
+.gridTarjetaCredito {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+}
+
+.formularioTarjetaCredito {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px 1fr 1fr 100px;
+    width: 100%;
+}
+
+input [type=text] {
+    border-radius: 5px;
+    width: 400px;
+    height: 30px;
+    font-size: 18px;
+    margin: 20px;
+    padding: 10px
+}
+
+input [type=tel] {
+    border-radius: 5px;
+    width: 400px;
+    height: 30px;
+    font-size: 18px;
+    margin: 20px;
+    padding: 10px
+}
+
+input [type=select] {
+    border-radius: 5px;
+    width: 400px;
+    height: 30px;
+    font-size: 18px;
+    margin: 20px;
+    padding: 10px
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+    color: #000;
+    font-size: 20px;
+}
+
+.fechaVencimiento {
+    display: flex;
+}
+
+.sinBorderIzquierdo {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #252850;
+    width: 20%;
+    align-items: center;
+    margin: auto 30px auto auto;
+}
+
+.titulo {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 26px;
+    font-family: "Roboto" sans-serif;
+}
+
+.sinBorderDerecho {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #252850;
+    width: 20%;
+    align-items: center;
+    margin: auto auto auto 30px;
+}
+
+.registroMetodoPago {
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.botonRegistrar {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}
+
+.botonAgregar {
+    background-color: #707070;
+    border-radius: 5px;
+    color: white;
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+#numeroTarjeta {
+    width: 100%;
+    border-radius: 5px;
+    height: 30px;
+}
+
+#mesExpiracion {
+    border-radius: 5px;
+    height: 50px;
+    width: 50%;
+    justify-self: right;
+}
+
+.mes {
+    display: grid;
+    align-items: center;
+}
+
+.vencimiento {
+    padding: 20px;
+    text-align: center;
+}
+
+#annoExpiracion {
+    margin-top: 11px;
+    border-radius: 5px;
+    height: 50px;
+    width: 50%;
+}
+
+#metodoPago {
+    height: 30px;
+    width: 100%;
+}
+
+#cardHolder {
+    width: 100%;
+    border-radius: 5px;
+    height: 30px;
+}
+
+#securityCode {
+    justify-self: center;
+    border-radius: 5px;
+    height: 30px;
+    width: 50%;
+}
+
+.nameOnCard {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.cardNumber {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.codSeguridad {
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    justify-self: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.divisor {
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: x-large;
+    font-size: 60px;
+    width: 50px;
+    height: 100px;
+    text-align: center;
+    align-self: center;
+}
+
+.formaDePago {
+    justify-self: center;
+    width: 100%;
+}
+
+
+/* Aqui terminan los estilos del body y comienzan los del footer */
+
+footer {
+    font-weight: bold;
+    height: 140px;
+    background-color: #000;
+}
+
+footer a {
+    margin-right: 20px;
+}
+
+#piePagina {
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+#face,
+#instagram,
+#twit {
+    font-size: 5px;
+    border: 2px solid #fff;
+    padding: 3px;
+    margin-top: 30px;
+    display: inline-block;
+    background-color: #fff;
+    color: black;
+    border-radius: 3px;
+}
+
+#footer {
+    margin-top: 118px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 60px 1fr;
+}
+
+.espacio1 {
+    grid-column: 3/5;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#piePagina {
+    display: flex;
+    grid-column: 3/5;
+    grid-row: 2;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

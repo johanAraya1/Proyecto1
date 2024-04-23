@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios Especializados</title>
+    <link rel="stylesheet" href="../Public/css/formularioUsuarioEspecializado.css">
+</head>
+
+<body>
+    <header class="fondo1">
+        <nav class="navegacion">
+            <div class="logo">
+                <a href="listarSiniestrosADM.html"><b>VIAJE SEGURO™</b></a>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Registrar usuarios</a>
+                    <ul class="submenu">
+                        <li><a href="registro_usuario_especializado.html">Registrar usuarios especializados</a></li>
+                        <li><a href="RegistrarUER.html">Registrar usuarios encargados de ruta</a></li>
+                        <li><a href="registrarUsuarioNormalADM.html">Registrar usuarios normales</a></li>
+                        <li><a href="listar_usuarios.html">Lista de usuarios</a></li>
+                    </ul>
+                </li>
+                <li><a href="listarCategoria.html">Categorías</a></li>
+                <li><a href="registrarRutasADM.html">Registrar ruta</a></li>
+                <li><a href="RegistrarSiniestroADM.html">Registrar siniestro</a></li>
+                <li><a href="registrarSolicitud AsistenciaADM.html">Solicitar asistencia</a></li>
+
+                <li><a href="listarVehiculosADM.html">Registrar vehiculo</a>
+                    <ul class="submenu">
+                        <li><a href="listarTipoVehiculos.html">Tipos de vehículos</a></li>
+                        <li><a href="caracteristicas.html">Caracteristicas</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Opciones</a>
+                    <ul class="submenu">
+                        <li><a href="listarTarjetasCreditoADM.html">Registrar método de pago</a></li>
+                        <li><a href="#" onclick="redirectLogout();">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <form action="/registrar-usuarios" id="form" method="POST" enctype="multipart/form-data">
+
+        <div class="formGuide">
+            <h2 class="heading">Registrar Usuarios Especializados</h2>
+        </div>
+
+        <div id="formColContainer">
+            <div id="formFirstCol">
+
+                <div class="firstCol">
+                    <label for="txtPrimerNombre">Primer nombre</label>
+                    <input type="text" id="txtPrimerNombre" class="inputStyle" required>
+                </div>
+                <div class="firstCol">
+                    <label for="txtPrimerApellido">Primer apellido</label>
+                    <input type="text" id="txtPrimerApellido" class="inputStyle" required>
+                </div>
+                <div class="firstCol">
+                    <label for="txtSegundoNombre">Segundo nombre</label>
+                    <input type="text" id="txtSegundoNombre" class="inputStyle">
+                </div>
+
+                <div class="firstCol">
+                    <label for="txtSegundoApellido">Segundo apellido</label>
+                    <input type="text" id="txtSegundoApellido" class="inputStyle">
+                </div>
+
+                <div class="firstCol">
+                    <label for="txtNumeroIdentificacion">Numero de identificacion</label>
+                    <input type="string" id="txtNumeroIdentificacion" class="inputStyle">
+                </div>
+                <div class="firstCol">
+                    <label for="txtNumeroTelefono">Numero de telefono</label>
+                    <input type="string" id="txtNumeroTelefono" class="inputStyle" required>
+                </div>
+                <div class="firstCol">
+                    <label for="emailCorreoElectronico">Correo electronico</label>
+                    <input type="email" id="emailCorreoElectronico" class="inputStyle" required>
+                </div>
+                <div class="firstCol">
+                    <label for="txtPassword">Contraseña</label>
+                    <input type="string" id="txtPassword" class="inputStyle" required>
+                </div>
+                <div class="firstCol">
+                    <label for="txtConfPassword">Confirmar contraseña</label>
+                    <input type="string" id="txtConfPassword" class="inputStyle" required>
+                </div>
+
+            </div>
+            <div id="formSecondCol">
+                <div class="firstCol">
+                    <label for="sltTipoUsuario">Tipo de usuario</label>
+                    <select id="sltTipoUsuario" class="inputStyle" required>
+                        <option value="">--Seleccione una opción--</option>
+                        <option value="Usuario especializado">Usuario especializado</option>
+                        <option value="Usuario encargado de rutas">Usuario encargado de rutas</option>
+                        <option value="Usuario Regular">Usuario Regular</option>
+                        <option value="Usuario Administrador">Usuario Administrador</option>
+                    </select>
+                </div>
+                <div class="firstCol">
+                    <label for="sltEstadoUsuario">Estado</label>
+                    <select id="sltEstadoUsuario" class="inputStyle" required>
+                        <option value="">--Seleccione una opción--</option>
+                        <option value="Activado">Activado</option>
+                        <option value="Desactivado">Desactivado</option>
+                    </select>
+                </div>
+
+                <div class="firstCol">
+                    <label for="sltProfesion">Profesión</label>
+                    <select id="sltProfesion" class="inputStyle" required>
+                        <option value="">--Seleccione una opción--</option>
+                        <option value="Doctor">Doctor</option>
+                        <option value="Paramedico">Paramedico</option>
+                        <option value="Operador de gruas">Operador de gruas</option>
+                        <option value="Operador de maquinaria pesada">Operador de maquinaria pesada</option>
+                        <option value="Agente de seguros_INS">Agente de seguros_INS</option>
+                        <option value="Oficial de policia">Oficial de policia</option>
+                        <option value="Oficial de transito">Oficial de transito</option>
+                        <option value="Chofer B1-B4">Chofer B1-B4</option>
+                        <option value="Chofer licencia especial">Chofer licencia especial</option>
+                        <option value="Mecanico de carros">Mecanico de carros</option>
+                        <option value="Mecanico de maquinaria pesada">Mecanico de maquinaria pesada</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="firstCol">
+                    <label for="sltGenero">Genero</label>
+                    <select id="sltGenero" class="inputStyle" required>
+                        <option value="">--Seleccione una opción--</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div class="firstCol">
+                    <label for="sltTipoIdentificacion">Tipo de identificacion</label>
+                    <select id="sltTipoIdentificacion" class="inputStyle" required>
+                    <option value="">--Seleccione una opción--</option>
+                    <option value="Nacional">Nacional</option>
+                    <option value="Dimex">Dimex</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                    <option value="Pasaporte">Juridica</option>
+                </select>
+                </div>
+                <div class="firstCol">
+                    <label for="sltTipoPersona">Tipo de persona</label>
+                    <select id="sltTipoPersona" class="inputStyle" required>
+                    <option value="">--Seleccione una opción--</option>
+                    <option value="Fisica">Fisica</option>
+                    <option value="Juridica">Juridica</option>
+                </select>
+                </div>
+                <div class="firstCol">
+                    <label for="txtMonto">Monto base</label>
+                    <input type="number" id="txtMonto" class="inputStyle" placeholder="Ingresar monto en colones" required>
+                </div>
+                <div class="firstCol">
+                    <label for="txtTarifa">Tarifa por uso de la plataforma</label>
+                    <input type="text" id="txtTarifa" class="inputStyle" required>
+                </div>
+                <div class="firstCol">
+                    <div id="cargosAdicionales">
+                        <label for="">Cargos adicionales</label>
+                        <div>
+                            <input id="rbtSi" name="rbtCargosAdicionales" type="radio" value="Si">
+                            <label for="rbtSi">Si</label>
+                        </div>
+                        <div>
+                            <input id="rbtNo" name="rbtCargosAdicionales" type="radio" value="No">
+                            <label for="rbtNo">No</label>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="formGuide">
+            <h2 class="heading">Seleccione las Categorías </h2>
+        </div>
+
+        <div id="containerCat">
+
+        </div>
+
+
+
+
+        </div>
+        <div class="formGuide">
+            <h2 class="heading">Registrar ubicación </h2>
+        </div>
+        <div id="formColContainer">
+            <div id="formFirstCol">
+                <div class="firstCol">
+                    <label for="sltProvincia">Provincia</label>
+                    <select id="sltProvincia" name="sltProvincia" class="inputStyle" required>
+                    <option value="">--Seleccione una provincia--</option>
+                    </select>
+                </div>
+                <div class="firstCol">
+                    <label for="sltCanton">Canton</label>
+                    <select id="sltCanton" name="sltCanton" class="inputStyle" required>
+                        <option value="">--Seleccione un canton--</option>
+                    </select>
+                </div>
+            </div>
+            <div id="formSecondCol">
+                <div class="firstCol">
+                    <label for="sltDistrito">Distrito</label>
+                    <select id="sltDistrito" name="sltDistrito" class="inputStyle" required>
+                        <option value="">--Seleccione un distrito--</option>
+                    </select>
+                </div>
+                <div id="informativo">
+                    <p>Favor llenar todos los espacios en blanco. Entre mas información se tenga del usuario, mejor el servicio que se brinda.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="formGuide">
+            <h2 class="heading">Fotografia</h2>
+        </div>
+
+        <div id="fotografia">
+            <div id="fotoContainer">
+                <img src="public/img/user-placeholder.png" alt="" id="fotoUsuario">
+            </div>
+            <button type="button" id="btnFoto">Subir fotografía</button>
+        </div>
+
+        <div class="styleBtn">
+            <button type="button" id="btnRegistrar">REGISTRAR</button>
+        </div>
+
+
+
+    </form>
+    <footer>
+        <div id="footer">
+            <div class="espacio1">
+                <a id="face" href="http://www.facebook.com" target="blank">
+                    <i class="fab fa-facebook fa-3x"></i>
+                </a>
+                <a id="twit" href="https://twitter.com/?lang=es" target="blank">
+                    <i class="fab fa-twitter fa-3x"></i>
+                </a>
+                <a id="instagram" href="https://www.instagram.com/?hl=es-la" target="blank">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </a>
+            </div>
+            <div id="piePagina">
+                <p>Derechos Reservados © 2020</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js "></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script src="../Public/js/servicio_usuariosUE.js "></script>
+    <script src="../Public/js//registroServicioCat.js"></script>
+    <script src="../Public/js/servicio_imagen.js"></script>
+    <script src="../Public/js/listar_prov_can_dis.js"></script>
+    <script src="../Public/js/registro_controladorUE.js "></script>
+    <script src="../Public/js/listarCategoriasControladorUE.js"></script>
+</body>
+
+</html>

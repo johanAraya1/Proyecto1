@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion {
+    width: 100%;
+    margin: 0 auto;
+    background: #000;
+    display: flow-root;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+
+.navegacion ul {
+    float: right;
+    margin-right: 50px;
+    padding-left: 10px;
+    list-style: none;
+}
+
+.logo {
+    float: left;
+    margin-top: 30px;
+    margin-left: 50px;
+    padding-bottom: 10px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu>li {
+    display: inline-block;
+}
+
+.menu>li>a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: rgb(221, 176, 176);
+    transition: all .3s;
+}
+
+.submenu {
+    position: absolute;
+    background: #333333;
+    width: 10%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+#buscarUsuario {
+    margin-top: 80px;
+    display: grid;
+}
+
+#buscarUsuario input {
+    width: 400px;
+    height: 35px;
+    border-radius: 20px;
+    justify-self: center;
+}
+
+#buscarUsuario input::placeholder {
+    text-align: center;
+    font-size: 16px;
+    border: gray;
+}
+
+#tablaUsuarios {
+    margin-left: 100px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9;
+    min-width: 400px;
+}
+
+#tablaUsuarios thead tr {
+    background-color: #009879;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+#tablaUsuarios th {
+    padding-left: 20px;
+}
+
+#tablaUsuarios thead,
+#tablaUsuarios td {
+    padding: 12px 15px;
+}
+
+#tablaUsuarios tbody tr {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+#tablaUsuarios tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+tbody tr button {
+    margin-top: 16px;
+    padding: 7px;
+    background-color: #009879;
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,433 @@
+    /* Aqui comienzan las clases de soporte para el Javascript */
+    
+    .errorDeInput {
+        border: 2px solid #ee5253;
+    }
+    /* Aquí termina el código de soporte para Javascript */
+    /*Aqui comienza el código para el header*/
+    
+    .navegacion {
+        height: 50px;
+        width: 100%;
+        margin: 0 auto;
+        background: #000;
+        display: flow-root;
+        position: fixed;
+        z-index: 1000;
+    }
+    
+    .navegacion ul {
+        float: right;
+        margin-right: 50px;
+        padding-left: 10px;
+        list-style: none;
+    }
+    
+    .logo {
+        float: left;
+        margin-top: 16px;
+        margin-left: 50px;
+    }
+    
+    .logo a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    
+    .menu>li {
+        display: inline-block;
+    }
+    
+    .menu>li>a {
+        display: block;
+        padding: 15px 20px;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+    }
+    
+    .menu li a:hover {
+        color: rgb(221, 176, 176);
+        transition: all .3s;
+    }
+    
+    .submenu {
+        position: absolute;
+        background: #333333;
+        width: 10%;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1.5s;
+    }
+    
+    .submenu li a {
+        display: block;
+        padding: 15px;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+    }
+    
+    .menu li:hover .submenu {
+        visibility: visible;
+        opacity: 1;
+    }
+    /*  #nav {
+        display: flex;
+        font-family: "Roboto", sans-serif;
+        background-color: black;
+        color: white;
+    }
+    
+    .logotipo {
+        flex-grow: 2;
+        padding-left: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .secciones {
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+        text-align: right;
+        padding-right: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    /* Aqui termina el código del header */
+    /* Aqui comienza el código para el formulario */
+    
+    .sinBorderIzquierdo {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-color: #252850;
+        width: 20%;
+        align-items: center;
+        margin: auto 30px auto auto;
+    }
+    
+    .titulo {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        padding: 30px;
+        font-size: 26px;
+        font-family: "Roboto" sans-serif;
+    }
+    
+    .sinBorderDerecho {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-color: #252850;
+        width: 20%;
+        align-items: center;
+        margin: auto auto auto 30px;
+    }
+    
+    h1 {
+        text-align: center;
+        padding: 10px;
+        color: #000;
+        font-size: 20px;
+    }
+    
+    #formularioUsuarioRegular {
+        font-family: "Roboto", sans-serif;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr repeat(7);
+        padding-top: 20px;
+        padding-bottom: 30px;
+        width: fit-content;
+        justify-items: center;
+        column-gap: 50px;
+        row-gap: 30px;
+    }
+    
+    .flexRadioIzquierdo {
+        display: flex;
+        padding-top: 15px;
+        justify-content: space-between;
+        width: 50%;
+    }
+    
+    .flexRadioDerecho {
+        display: flex;
+        padding-top: 15px;
+        justify-content: space-between;
+    }
+    
+    .radioButton1 {
+        grid-column-start: 1;
+        grid-row-start: 3;
+        justify-self: left;
+        width: 75%;
+        margin-left: 10px;
+        padding: 10px;
+    }
+    
+    .radioButton2 {
+        grid-column-start: 2;
+        grid-row-start: 3;
+        justify-self: left;
+        width: 90%;
+        margin-left: 10px;
+        padding: 10px;
+    }
+    
+    .radioContenedor {
+        width: 100%;
+    }
+    
+    .botonRegistrar {
+        text-align: center;
+    }
+    
+    #enviarFormulario {
+        background-color: #707070;
+        border-radius: 5px;
+        color: white;
+        width: 200px;
+        height: 60px;
+        font-size: 18px;
+        margin: 80px;
+        cursor: pointer;
+    }
+    
+    .campoFoto {
+        display: flexbox;
+        flex-direction: column;
+        justify-content: left;
+        width: 100%;
+    }
+    
+    .adjuntarImagen {
+        grid-column-start: 1;
+        grid-row-start: 7;
+        width: 45%;
+        justify-self: left;
+        margin-left: 10px;
+    }
+    
+    #fotografiaUsuario {
+        width: 300px;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        padding: 10px;
+    }
+    
+    .confirmarPassword {
+        grid-column-start: 2;
+        grid-row-start: 6;
+    }
+    
+    .pwd {
+        grid-column-start: 2;
+        grid-row-start: 5;
+    }
+    
+    .estadoPwd {
+        display: flex;
+        flex-direction: column;
+        padding: 3px;
+    }
+    
+    .telefono {
+        grid-column-start: 1;
+        grid-row-start: 4;
+    }
+    
+    .requisitosPassword {
+        display: flex;
+        flex-direction: column;
+        padding: 3px;
+    }
+    
+    .selectTipoCedula {
+        justify-self: left;
+        width: 75%;
+        margin-left: 10px;
+        padding: 10px;
+    }
+    
+    .identificacionDeUsuario {
+        grid-column-start: 2;
+        grid-row-start: 4;
+    }
+    
+    .tipoDeCedula {
+        grid-column-start: 1;
+        grid-row-start: 4;
+    }
+    
+    #tipoPersona {
+        width: 425px;
+        height: 30px;
+    }
+    
+    #tipoCedula {
+        width: 425px;
+        height: 30px;
+    }
+    
+    input[type=text] {
+        border-radius: 5px;
+        width: 400px;
+        height: 30px;
+        font-size: 18px;
+        margin: 20px;
+        padding: 10px;
+    }
+    
+    input[type=password] {
+        border-radius: 5px;
+        width: 400px;
+        height: 30px;
+        font-size: 18px;
+        margin: 20px;
+        padding: 10px
+    }
+    
+    input[type=number] {
+        border-radius: 5px;
+        width: 400px;
+        height: 30px;
+        font-size: 18px;
+        margin: 20px;
+        padding: 10px
+    }
+    
+    input[type=email] {
+        border-radius: 5px;
+        width: 400px;
+        height: 30px;
+        font-size: 18px;
+        margin: 20px;
+        padding: 10px;
+    }
+    
+    #adjuntarFotografia {
+        margin-top: 20px;
+    }
+    
+    #botonSubirImagen {
+        margin-left: 10px;
+    }
+    
+    .formulario {
+        display: grid;
+        justify-content: center;
+        padding-top: 50px;
+    }
+    /* Aquí termina el código del formulario */
+    /* Aquí comienza el código del footer */
+    
+    footer {
+        font-weight: bold;
+        height: 140px;
+        background-color: #000;
+    }
+    
+    footer a {
+        margin-right: 20px;
+    }
+    
+    #piePagina {
+        font-weight: normal;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+    
+    #face,
+    #instagram,
+    #twit {
+        font-size: 5px;
+        border: 2px solid #fff;
+        padding: 3px;
+        margin-top: 30px;
+        display: inline-block;
+        background-color: #fff;
+        color: black;
+        border-radius: 3px;
+    }
+    
+    #footer {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 60px 1fr;
+    }
+    
+    .espacio1 {
+        grid-column: 3/5;
+        align-content: center;
+        text-align: center;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    #piePagina {
+        display: flex;
+        grid-column: 3/5;
+        grid-row: 2;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 10px;
+    }
+    /* footer Provisional #footer {
+        display: grid;
+        grid-template-columns: 1fr 250px 1fr;
+        background-color: black;
+        color: white;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    .primerLink {
+        height: 50px;
+        width: 50px;
+        background-color: white;
+        grid-column-start: 2;
+        margin: 10px;
+    }
+    
+    .segundoLink {
+        height: 50px;
+        width: 50px;
+        background-color: white;
+        grid-column-start: 2;
+        margin: 10px
+    }
+    
+    .tercerLink {
+        height: 50px;
+        width: 50px;
+        background-color: white;
+        grid-column-start: 2;
+        margin: 10px;
+    }
+    
+    h2 {
+        grid-row-start: 2;
+        grid-column-start: 2;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .links {
+        display: flex;
+        justify-self: center;
+        grid-column-start: 2;
+        justify-content: space-around;
+        padding: 5px;
+    }
+    /*Aqui terminar el código del footer*/
+    /*
